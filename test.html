@@ -1,0 +1,85 @@
+<div class="main-content">
+    <div class="main">
+        <div>
+            <div class="pagination">
+                <div>
+                    <ul>
+                        <li><a href="http://localhost/aaa">Trang chủ</a></li>
+                        <li><a href="http://localhost/aaa/tuvan">Tư vấn sức khỏe</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <h1 class="title-name">Liên hệ</h1>
+                <div style="clear: both;"></div>
+                <div style="margin-bottom:20px;">
+                    <h3 class="title-footer" style="font-size:20px;color:#3360af;">Công ty cổ phần dược phẩm Medzavy
+                    </h3>
+                    <ul>
+                        <li style="font-size:15px;font-weight:bold;"><i class="fa fa-map-marker" aria-hidden="true"
+                                style="color:#3360af;"></i>
+                            <?php echo $info['address'] ?>
+                        </li>
+                        <li style="font-size:15px;font-weight:bold;"><i class="fa fa-phone" aria-hidden="true" style="color:#3360af;"></i>
+                            <?php echo $info['phone'] ?>
+                        </li>
+                        <li style="font-size:15px;font-weight:bold;"><i class="fa fa-envelope-o" aria-hidden="true"
+                                style="color:#3360af;"></i>
+                            <?php echo $info['email'] ?>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-detail">
+                    <form action="" id="contactForm" method="POST">
+                        <div class="fieldset">
+                            <h2 class="legend">Thông tin của bạn</h2>
+                            <ul class="form-list">
+                                <li class="fields">
+                                    <div class="input-box">
+                                        <input name="name" id="name" title="Name" value="" placeholder="Tên của bạn"
+                                            class="input-text required-entry" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"
+                                            data-_extension-text-contrast="both" type="text">
+                                    </div>
+                                    <div class="input-box">
+                                        <input name="email" id="email" title="Email" value="" placeholder="Email" class="input-text required-entry validate-email"
+                                            required="" type="text">
+                                    </div>
+                                    <div class="input-box">
+                                        <input name="phone" id="phone" title="Telephone" placeholder="Số điện thoại"
+                                            value="" class="input-text" required="" type="text">
+                                    </div>
+                                    <div class="input-box">
+                                        <input placeholder="Địa chỉ" name="address" id="address" title="address" value=""
+                                            class="input-text" type="text">
+                                    </div>
+                                    <div class="input-box">
+                                        <textarea placeholder="Nội dung" name="comment" id="comment" title="Comment"
+                                            class="required-entry input-text" cols="5" rows="8" required=""></textarea>
+                                    </div>
+                                    <div class="input-box">
+                                        <input class="input-text" placeholder="Mã xác nhận" name="captcha" id="captcha"
+                                            style="float: left; width:40%;" required="" type="text">
+                                        <img class="captcha" style="margin-top:8px;margin-left:5px;" src="http://medzavy.com/captcha.png?background=WzI1NSwyNTUsMjU1XQ==&amp;rand=0.028014933683755627">
+                                        <script>
+                                            $(".captcha").attr("src", "http://medzavy.com/captcha.png?background=WzI1NSwyNTUsMjU1XQ==&rand=" + Math.random());
+                                                            $(".captcha").click(function() {
+                                                                $(".captcha").attr("src", "http://medzavy.com/captcha.png?background=WzI1NSwyNTUsMjU1XQ==&rand=" + Math.random());
+                                                            });
+                                                        </script>
+                                    </div>
+                                    <div class="buttons-set" style="text-align:center;">
+                                        <button type="submit" title="Submit" class="button"
+                                            data-_extension-text-contrast=""><span><span>Gửi</span></span>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

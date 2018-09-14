@@ -1,0 +1,68 @@
+<?php
+class Menu extends Config
+{
+
+    private $table_name = "leftmenu";
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function readAll()
+    {
+        $cond = '';
+        $query = "SELECT
+				    *
+				FROM
+                    " . $this->table_name . "
+                ORDER BY parent ASC, orders ASC, id DESC";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        $this->all_list = array();
+
+        $index = array();
+        $i = 0;
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            //    $row['username'] = '<a href="'.MAIN_URL.'/taxi/'.$row['username'].'"></a>';
+            
+            if ($row['parent'] != 0) {
+                $pid = $index[$row['parent']];
+                $this->all_list[$pid]['child'][] = $row;
+            } else {
+                $this->all_list[] = $row;
+                $index[$row['id']] = $i;
+            }
+            $i++;
+        }
+        return $this->all_list;
+    }
+
+    public function readOne()
+    {
+        $query = "SELECT
+					*
+				FROM
+					" . $this->table_name . "
+                WHERE id = ?";
+                
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $this->id);
+
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // set values
+        if ($row['id']) {
+            $this->id = $row['id'];
+            $this->title = $row['title'];
+            $this->link = $row['link'];
+            $this->order = $row['orders'];
+        }
+
+        return ($row['id'] ? $row : null);
+    }
+
+}

@@ -1,0 +1,364 @@
+@media screen and (max-width: 1170px) {
+	.main > div{
+		margin: 0 25px;
+		position: relative;
+	}
+	.main-footer .main > div{
+		margin: 0 25px;
+	}
+	#main-menu {
+	    float: left;
+	    padding-left: 10px;
+	}
+	.menu-content > ul.main-menu > li {
+	    float: none;
+	    display: inline-block;
+	    line-height: 60px;
+	}
+	.menu-content{
+		position: relative;
+	}
+	.menu-content:before{
+		content: '';
+		width: 100%;
+		height: 1px;
+		background: #ccc;
+		display: block;
+	}
+	.about-item h3 i{
+		margin-right: 20px;
+	}
+	.about-item h3 a {
+	    color: #424b56;
+	    font-weight: 400;
+	    line-height: 29px;
+	    padding-left: 0;
+	    font-size: 18px;
+	    display: block;
+	    padding-top: 16px;
+	}
+	.list-home-product{
+		margin: 0 15px;
+	}
+	.home-list-news{
+		margin: 0;
+	}
+	.about-item > div {
+	    margin: 0 20px;
+	}
+	.list-about {
+	    margin: -20px;
+	}
+	.header-content .logo{
+		float: none;
+	}
+	.header-content .logo a{
+		margin: auto;
+	}
+	#main-menu {
+	    float: none;
+	    padding-left: 0;
+	}
+	.main-menu {
+	    float: none;
+	    margin-top: 0;
+	    margin-right: 0;
+	    text-align: center;
+	}
+	.home-about-item > div{
+		padding-right: 90px;
+	}
+	.home-about-item img{
+		width: 60px;
+	}
+	.home-about-item > div{
+		margin: 0 10px;
+	}
+	.list-about {
+	    margin: -10px;
+	}
+}
+@media screen and (max-width: 1100px) {
+	.slick-prev,.slick-next{
+		display: none !important;
+	}
+	.home-product .main > div,
+	.main-footer .main > div,
+	.duantieubieu-content{
+
+	}
+	.menu-content > ul.main-menu > li:last-child {
+	    padding-right: 20px;
+	}
+	.top-hotline{
+		padding-right: 20px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.home-product .main > div,
+	.main-footer .main > div,
+	.duantieubieu-content{
+
+	}
+	.main > div{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.header-content .logo {
+	    float: none;
+	    margin: 0;
+	    padding: 0;
+	    text-align: center;
+	}
+	.header-top .wellcome {
+	    padding-left: 20px;
+	}
+	.header-content .logo a{
+		margin: auto;
+	}
+	.mobile-menu{
+		display: block;
+		position: absolute;
+		top: 30px;
+		left: 0px;
+	}
+	.mobile-menu span{
+		display: block;
+		width: 30px;
+		height: 4px;
+		background: #000;
+		margin: 5px;
+		border-radius: 2px;
+	}
+	.menu-content {
+	    position: absolute;
+	    z-index: 99;
+	    background: rgba(0,0,0,0.8);
+	    width: 100%;
+	    overflow: auto;
+	    border-bottom: 1px solid #62538b;
+	    display: none;
+	    left: 0;
+	}
+	.menu-content.active{
+		display: block;
+	}
+	.menu-content ul.main-menu{
+		float: none;
+	}
+	.menu-content ul.main-menu li{
+		float: none;
+	}
+	.menu-content > ul.main-menu > li {
+	    line-height: 40px;
+	    text-align: left;
+	}
+	.menu-content > ul > li > a{
+		border: none !important;
+		color: #fff;
+		padding: 0;
+	}
+	div.home-news {
+	    float: none;
+	    width: 100%;
+	}
+	div.home-news > div {
+	    padding-right: 10px;
+		padding-left: 10px;
+	}
+	div.left-news{
+		width: 50%;
+	}
+	.right-news{
+		width: 50%;
+	}
+	.home-hinhanh {
+	    position: relative;
+	    width: 100%;
+	    float: none;
+	}
+	.hinh-anh-content > div{
+		margin: 0 10px;
+		position: relative;
+	}
+	.list-hinhanh{
+
+	}
+	.home-hinhanh .title-module2{
+		padding-left: 10px;
+	}
+	.title-module2{
+		padding-left: 10px;
+	}
+
+}
+@media screen and (max-width: 800px) {
+	.left-content {
+	    float: left;
+	    width: 33.33%;
+	}
+	.right-content {
+	    float: right;
+	    width: 66.66%;
+	}
+	.left-product {
+	    float: none;
+	    width: 100%;
+	}
+	.left-product > div{
+		margin-right: 0;
+	}
+	.right-product {
+	    width: 100%;
+	    float: none;
+	    padding-top: 20px;
+	}
+	.home-about-item {
+	    float: none;
+	    width: 100%;
+	    margin-bottom: 20px;
+	}
+	.home-about-item > div {
+	    margin: 0;
+	}
+	.list-about {
+	    margin: 0;
+	}
+	.home-about-item > div{
+		height: auto;
+	}
+	.home-row4 .tuvan {
+	    float: none;
+	    width: 100%;
+	}
+	.home-row4 .tuvan > div {
+	    padding-right: 0px;
+	}
+	.tintuc {
+	    width: 100%;
+	    float: none;
+	    clear: both;
+	    padding-top: 50px;
+	}
+	.tintuc > div{
+		padding: 0;
+	}
+	.menu-content > ul.main-menu > li{
+		display: block;
+	}
+	.gui-cauhoi .table1,.gui-cauhoi .table2{
+	    float: none;
+	    width: 100%;
+	}
+	.gui-cauhoi .table2 td:first-child{
+		width: 35% !important;
+	}
+	.cauhoi-content-item {
+	    float: none;
+	    width: 100%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.left-content,.right-content{
+	    float: none;
+	    width: 100%;
+	}
+	.left-banner{
+		display: none;
+	}
+	.right-content > div {
+	    padding-left: 0;
+	}
+	.product-item{
+	    width: 50%;
+	    float: left;
+	    text-align: center;
+	    padding-bottom: 20px;
+	}
+	.product-item:nth-child(2n+1){
+	    clear: both;
+	}
+	.product-item:nth-child(3n+1){
+	    clear: unset;
+	}
+	.footer-item {
+	    float: none;
+	    width: 100%;
+	}
+	.footer-2{
+		padding-bottom: 20px;
+	}
+	.menu-content > ul.main-menu > li ul{
+	    display: block;
+	    padding-left: 25px;
+	}
+
+	.menu-content > ul.main-menu > li ul li{
+		padding: 10px 0;
+	}
+	.menu-content > ul.main-menu > li > ul  > li  > a{
+		text-transform: uppercase;
+	}
+	.left-content{
+
+	}
+	.home-row5-left {
+	    float: none;
+	    width: 100%;
+	}
+	.tab-row3 li {
+	    display: inline-block;
+	    padding: 0;
+	    width: 50%;
+	    float: left;
+	}
+	.tab-row3:after{
+		content: '';
+		clear: both;
+		display: block;
+	}
+	div.tab-row3-content-item .tab2,
+	div.tab-row3-content-item .tab1{
+	    float: none;
+	    width: 100%;
+	}
+	div.tab-row3-content-item .tab2 > div{
+		padding-left: 0;
+	}
+	.div.tab-row3-content-item .tab1 > div{
+		padding-right: 0;
+	}
+	.home-row5-right {
+	    float: none;
+	    width: 100%;
+	    text-align: center;
+	}
+	.home-row5-right > div{
+		padding: 50px 0;
+	}
+	.head-top-left ul li.lang span{
+		display: none;
+	}
+	.head-top-left ul li:last-child{
+		margin: 0;
+		padding: 0;
+	}
+	.head-top-right{
+		display: none;
+	}
+	.danhsach-cauhoi > ul li a {
+	    display: block;
+	    padding: 10px 0;
+	    font-weight: bold;
+	    color: #000;
+	    border-bottom: 1px solid #ccc;
+	    font-size: 12px;
+	}
+}
+
+
+
+
+
+
+
