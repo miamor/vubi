@@ -2,10 +2,10 @@
 session_start();
 error_reporting(E_ERROR | E_PARSE);
 
-$__pattern = '/aaa_admin';
+$__pattern = '/vubi/admin';
 
 define('MAIN_PATH', './');
-define('HOST_URL', '//localhost'.$__pattern);
+define('HOST_URL', '//45.119.213.81'.$__pattern);
 define('MAIN_URL', 'http:'.HOST_URL);
 define('ASSETS', MAIN_URL.'/assets');
 define('CSS', ASSETS.'/dist/css');
@@ -50,9 +50,9 @@ class Config {
 
 	// specify your own database credentials
 	private $host = "localhost";
-	private $db_name = "aaa";
+	private $db_name = "vubi";
 	private $username = "root";
-	private $password = "";
+	private $password = "mta@ppa123";
 	private $port = "3306";
 	protected $conn;
 	public $u;

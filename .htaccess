@@ -41,7 +41,7 @@
 #Options +Multiviews
 
 RewriteEngine On
-RewriteBase /aaa/
+RewriteBase /vubi/
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
