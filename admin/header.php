@@ -107,6 +107,18 @@ $config->addJS('dist', 'main.js');?>
             </li>
 
             <li class="treeview">
+              <a href="<?php echo MAIN_URL ?>/service1">
+                <i class="fa fa-dashboard"></i> <span>Dịch vụ 1</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="<?php echo MAIN_URL ?>/service2">
+                <i class="fa fa-dashboard"></i> <span>Dịch vụ 2</span>
+              </a>
+            </li>
+
+            <li class="treeview">
               <a href="<?php echo MAIN_URL ?>/about">
                 <i class="fa fa-star"></i> <span>About</span>
               </a>

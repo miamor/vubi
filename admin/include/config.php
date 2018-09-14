@@ -2,7 +2,7 @@
 session_start();
 error_reporting(E_ERROR | E_PARSE);
 
-$__pattern = '/aaa_admin';
+$__pattern = '/aaa/admin';
 
 define('MAIN_PATH', './');
 define('HOST_URL', '//localhost'.$__pattern);

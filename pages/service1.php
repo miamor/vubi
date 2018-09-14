@@ -6,18 +6,18 @@ $news = new News();
 
 if ($subpage) {
 	$news->id = $subpage;
-    $news->readOne(0);
+    $news->readOne(1);
     
     echo $config->breadcumb(array(
-        array('link' => MAIN_URL.'/news', 'title' => 'Tin tức'),
+        array('link' => MAIN_URL.'/service1', 'title' => 'Dịch vụ 1'),
         array('link' => $news->link, 'title' => $news->title),
     ));
     
 } else {
-    $newsList = $news->readAll();
+    $newsList = $news->readAllServices(1);
 
     echo $config->breadcumb(array(
-        array('link'=>'news', 'title'=>'Tin tức'),
+        array('link'=>'service1', 'title'=>'Dịch vụ 1'),
     ));    
 }
 

@@ -1396,3 +1396,7 @@ div.left-news a{
     padding: 0 8px;
     position: relative;
 }
+.news-price{margin-top:-7px;font-size:14px}
+.news-price span{font-weight:600;color:#e84c3d;font-size:16px}
+.news-one-price{font-size:15px;font-weight:400}
+.news-one-price span{font-weight:600;color:#e84c3d;font-size:17px}
