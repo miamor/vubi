@@ -5,7 +5,7 @@ error_reporting(E_ERROR | E_PARSE);
 $__pattern = '/vubi';
 
 define('MAIN_PATH', './');
-define('HOST_URL', '//45.119.213.81' . $__pattern);
+define('HOST_URL', '//vubi.vn' . $__pattern);
 define('MAIN_URL', 'http:' . HOST_URL);
 define('ASSETS', MAIN_URL . '/assets');
 define('CSS', ASSETS . '/dist/css');

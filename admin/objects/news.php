@@ -15,7 +15,7 @@ class News extends Config
         $query = "INSERT INTO
 					" . $this->table_name . "
 				SET
-					title = ?, link = ?, image = ?, content = ?, author = ?, date = ?";
+					title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?, is_service = ?";
 
         $stmt = $this->conn->prepare($query);
 
@@ -26,6 +26,8 @@ class News extends Config
         $this->content = htmlspecialchars(strip_tags($this->content));
         $this->author = htmlspecialchars(strip_tags($this->author));
         $this->date = htmlspecialchars(strip_tags($this->date));
+        $this->price = htmlspecialchars(strip_tags($this->price));
+        $this->is_service = htmlspecialchars(strip_tags($this->is_service));
         //$this->date = date("Y-m-d h:i:s a", time());
 
         // bind parameters
@@ -35,6 +37,8 @@ class News extends Config
         $stmt->bindParam(4, $this->content);
         $stmt->bindParam(5, $this->author);
         $stmt->bindParam(6, $this->date);
+        $stmt->bindParam(7, $this->price);
+        $stmt->bindParam(8, $this->is_service);
 
         // execute the query
         if ($stmt->execute()) {
@@ -50,7 +54,7 @@ class News extends Config
         $query = "UPDATE
 					" . $this->table_name . "
 				SET
-                    title = ?, link = ?, image = ?, content = ?, author = ?, date = ?
+                    title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?
 				WHERE
 					id = ?";
 
@@ -63,6 +67,7 @@ class News extends Config
         $this->content = htmlspecialchars(strip_tags($this->content));
         $this->author = htmlspecialchars(strip_tags($this->author));
         $this->date = htmlspecialchars(strip_tags($this->date));
+        $this->price = htmlspecialchars(strip_tags($this->price));
         //$this->date = date("Y-m-d h:i:s a", time());
 
         // bind parameters
@@ -72,7 +77,9 @@ class News extends Config
         $stmt->bindParam(4, $this->content);
         $stmt->bindParam(5, $this->author);
         $stmt->bindParam(6, $this->date);
-        $stmt->bindParam(7, $this->id);
+        $stmt->bindParam(7, $this->price);
+        $stmt->bindParam(8, $this->id);
+        
 
         // execute the query
         if ($stmt->execute()) {
@@ -129,7 +136,32 @@ class News extends Config
 				    *
 				FROM
 					" . $this->table_name . "
-				{$cond}
+                WHERE 
+                    is_service = 0
+                ORDER BY id DESC";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        $this->all_list = array();
+
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            //    $row['username'] = '<a href="'.MAIN_URL.'/taxi/'.$row['username'].'"></a>';
+            $row['author'] = $this->getUserInfo($row['author']);
+            $this->all_list[] = $row;
+        }
+        return $this->all_list;
+    }
+
+    public function readAllServices($sid)
+    {
+        $cond = '';
+        $query = "SELECT
+				    *
+				FROM
+					" . $this->table_name . "
+                WHERE 
+                    is_service = $sid
                 ORDER BY id DESC";
 
         $stmt = $this->conn->prepare($query);
@@ -167,6 +199,7 @@ class News extends Config
             $this->content = $row['content'];
             $this->author = $this->getUserInfo($row['author']);
             $this->date = $row['date'];
+            $this->price = $row['price'];
         }
 
         return ($row['id'] ? $row : null);

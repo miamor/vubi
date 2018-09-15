@@ -10,8 +10,8 @@ $news->image = isset($_POST['image']) ? $_POST['image'] : null;
 $news->author = isset($_POST['author']) ? $_POST['author'] : null;
 $news->date = isset($_POST['date']) ? $_POST['date'] : null;
 $news->content = isset($_POST['content']) ? $_POST['content'] : null;
-$news->price = 0;
-$news->is_service = 0;
+$news->price = isset($_POST['price']) ? $_POST['price'] : 0;
+$news->is_service = 2;
 
 //echo json_encode($_POST, JSON_UNESCAPED_UNICODE);
 

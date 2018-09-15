@@ -53,8 +53,8 @@ $config = new Config();
                                 <li class="menu-item-1 active"><a href="<?php echo MAIN_URL ?>">Trang chủ</a></li>
                                 <li class="menu-item-2"><a href="<?php echo MAIN_URL ?>/about">Giới thiệu</a></li>
                                 <li class="menu-item-3"><a href="<?php echo MAIN_URL ?>/news">Tin tức</a></li>
-                                <li class="menu-item-4"><a href="#">Dịch vụ 1</a></li>
-                                <li class="menu-item-5"><a href="#">Dịch vụ 2</a></li>
+                                <li class="menu-item-4"><a href="<?php echo MAIN_URL ?>/service1">Dịch vụ 1</a></li>
+                                <li class="menu-item-5"><a href="<?php echo MAIN_URL ?>/service2">Dịch vụ 2</a></li>
                                 <li class="menu-item-6"><a href="<?php echo MAIN_URL ?>/tuvan">Tư vấn</a></li>
                                 <li class="menu-item-7"><a href="<?php echo MAIN_URL ?>/contact">Liên hệ</a></li>                
                             </ul>                                            
