@@ -4,7 +4,8 @@ $(document).ready(function () {
         $.post(MAIN_URL+'/requests/feedback/edit.php', $(this).serialize(), function (data) {
             console.log(data);
             if (data == 1) {
-                mtip('', 'success', '', 'Cập nhật thành công!')
+                mtip('', 'success', '', 'Cập nhật thành công!');
+                location.href = MAIN_URL+'/feedback';
             }
         })
         return false

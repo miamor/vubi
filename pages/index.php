@@ -7,7 +7,7 @@ include 'objects/partners.php';
 $news = new News();
 $doctors = new Doctors();
 $feedback = new Feedback();
-$partners = new Partner();
+$partners = new Partners();
 
 $tuvanNewsHighlight = $news->readMany(0, 2);
 $tuvanNews = $news->readMany(2, 2);

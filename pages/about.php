@@ -15,7 +15,7 @@
             <div>
 
                 <div class="content">
-                    <?php echo $info['about'] ?>
+                    <?php echo $info['info'] ?>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ $config->addJS('dist', "{$page}/add.js");
   </h1>
   <ol class="breadcrumb">
     <li><a href="<?php echo MAIN_URL ?>"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li><a href="<?php echo MAIN_URL ?>/news">Dịch vụ 1</a></li>
+    <li><a href="<?php echo MAIN_URL ?>/news">Xét nghiệm ung thư</a></li>
     <li class="active">Thêm mới</li>
   </ol>
 </section>

@@ -88,13 +88,16 @@ class Menu extends Config
 
     public function readAll()
     {
-        $cond = '';
         $query = "SELECT
-				    *
+				    C.id,C.title, C.orders,C.link,
+                    P.title as parent_title,
+                    P.link as parent_link
 				FROM
-					" . $this->table_name . "
-				{$cond}
-                ORDER BY orders ASC, id DESC";
+					" . $this->table_name . " C
+                LEFT JOIN 
+                    " . $this->table_name . " P
+                ON C.parent = P.id
+                ORDER BY C.orders ASC, C.id DESC";
 
         $stmt = $this->conn->prepare($query);
         $stmt->execute();

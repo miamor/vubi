@@ -10,3 +10,11 @@
     </div>
     <?php echo $news->content ?>
 </div>
+
+
+<h3 style="margin-top:50px">Tin liên quan</h3>
+<ol class="related-news">
+<?php foreach($related as $rO) { ?>
+    <li><a href="<?php echo $rO['link'] ?>"><?php echo $rO['title'] ?></a>
+<?php } ?>
+</ol>

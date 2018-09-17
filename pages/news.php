@@ -7,6 +7,8 @@ $news = new News();
 if ($subpage) {
 	$news->id = $subpage;
     $news->readOne(0);
+
+    $related = $news->getRelated(0, $news->title, $news->id);
     
     echo $config->breadcumb(array(
         array('link' => MAIN_URL.'/news', 'title' => 'Tin tức'),

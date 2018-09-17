@@ -1400,3 +1400,47 @@ div.left-news a{
 .news-price span{font-weight:600;color:#e84c3d;font-size:16px}
 .news-one-price{font-size:15px;font-weight:400}
 .news-one-price span{font-weight:600;color:#e84c3d;font-size:17px}
+
+
+
+.main-menu .sub-menu{
+    display: none;
+    position: absolute;
+    top:75px;
+    left:20px;
+    z-index:9999;
+    width:300px;
+    background:#eee;
+}
+.main-menu li{position: relative;line-height: 75px}
+.main-menu li a{display: inline-block}
+
+.main-menu li:hover > .sub-menu{
+    display: block
+}
+
+.main-menu > li > .sub-menu li:hover{
+    background: #ddd
+}
+.main-menu > li > .sub-menu li a:hover{
+    color:#338d5c;
+    font-weight: 600
+}
+
+.main-menu > li > .sub-menu li{
+    padding:10px 5px;
+    border-bottom: 1px solid #ccc
+}
+
+.menu-content > ul ul li{
+    line-height:20px
+}
+
+.main-menu > li > .sub-menu li a{
+    color:#222;
+    padding:5px 10px;
+    font-weight:400
+}
+
+.related-news{margin-top:-10px}
+.related-news li{padding:6px 0;border-bottom:1px dashed #d9d9d9}

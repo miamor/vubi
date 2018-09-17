@@ -1,4 +1,4 @@
-<h2 class="module-title"><span>Dịch vụ 2</span></h2>
+<h2 class="module-title"><span>Tầm soát di truyền</span></h2>
 <div class="category-product">
     <div class="home-list-news">
         <?php foreach ($newsList as $nO) { ?>

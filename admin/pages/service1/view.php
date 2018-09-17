@@ -9,11 +9,11 @@ $config->addJS('dist', "{$page}/edit.js");
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Dịch vụ 1 - sửa
+    Xét nghiệm ung thư - sửa
   </h1>
   <ol class="breadcrumb">
     <li><a href="<?php echo MAIN_URL ?>"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li><a href="<?php echo MAIN_URL ?>/service1">Dịch vụ 1</a></li>
+    <li><a href="<?php echo MAIN_URL ?>/service1">Xét nghiệm ung thư</a></li>
     <li class="active">Sửa</li>
   </ol>
 </section>

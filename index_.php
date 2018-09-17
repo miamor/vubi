@@ -9,7 +9,7 @@ $about = new About();
 $news = new News();
 $doctors = new Doctors();
 $feedback = new Feedback();
-$partners = new Partner();
+$partners = new Partners();
 
 $info = $about->getInfo();
 $tuvanNewsHighlight = $news->readMany(0, 2);
