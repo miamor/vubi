@@ -14,6 +14,6 @@ Thêm 1 phần đối tác trong admin, phần footer sửa dạng template tron
 1. Phần tin tức: Cho phép thêm ảnh vào tin tức, khi sửa xong thì redirect về back Admin/News, phần thêm bài chưa thêm được. **Em test vẫn thêm được tin mới. Thêm/sửa xong thì chuyển trang/reload.**
 4. ~~Phần About: Chỉnh sửa xong có thông báo đã sửa.~~
 **Đang không cho hiện thông báo, reload trang luôn.**
-5. Đội ngũ bác sĩ, Phản hồi, Dịch vụ chưa hoạt động. **Ko phải ko hoạt động, mà chưa cho chuyển hướng. Đã fix lại, submit thành công thì load lại trang.**
+5. Đội ngũ bác sĩ, Phản hồi, Dịch vụ chưa hoạt động. **Ko phải ko hoạt động, mà chưa cho chuyển hướng. E fix lại rồi, submit thành công thì load lại trang luôn.**
 6. ~~Menu trái thêm phần chèn link (tức là khi ấn vào menu trái sẽ ra link nào).~~ **Bản cũ đã có rồi mà.**
 7. Liên kết phần tư vấn lưu vào SQL, Quản lý bằng Admin. **Tư vấn nào cơ?**
