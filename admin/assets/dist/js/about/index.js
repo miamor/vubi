@@ -13,7 +13,8 @@ $(document).ready(function () {
             console.log(data);
             if (data == 1) {
                 //location.href = MAIN_URL+'/about';
-                mtip('', 'success', '', 'Thông tin cập nhật thành công!')
+                mtip('', 'success', '', 'Thông tin cập nhật thành công!');
+                location.reload();
             } else {
                 mtip('', 'error', '', 'Có lỗi xảy ra!')
             }

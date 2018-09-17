@@ -27,8 +27,8 @@ $config = new Config();
                             <li><a href="tel:<?php echo $info['phone'] ?>"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo $info['phone'] ?></a></li>
                             <li class="lang">
                                 <span>Ngôn ngữ</span>
-                                <a href="#"><img src="images/en.jpg"></a>
-                                <a href="#"><img src="images/vi.jpg"></a>
+                                <a href="#"><img src="<?php echo MAIN_URL ?>/images/en.jpg"></a>
+                                <a href="#"><img src="<?php echo MAIN_URL ?>/images/vi.jpg"></a>
                             </li>
                         </ul>
                     </div>
@@ -53,8 +53,22 @@ $config = new Config();
                                 <li class="menu-item-1 active"><a href="<?php echo MAIN_URL ?>">Trang chủ</a></li>
                                 <li class="menu-item-2"><a href="<?php echo MAIN_URL ?>/about">Giới thiệu</a></li>
                                 <li class="menu-item-3"><a href="<?php echo MAIN_URL ?>/news">Tin tức</a></li>
-                                <li class="menu-item-4"><a href="<?php echo MAIN_URL ?>/service1">Dịch vụ 1</a></li>
-                                <li class="menu-item-5"><a href="<?php echo MAIN_URL ?>/service2">Dịch vụ 2</a></li>
+                                <li class="menu-item-4">
+                                    <a href="<?php echo MAIN_URL ?>/service1">Xét nghiệm ung thư</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Elsee Target 315 </a></li>
+                                        <li><a href="#">Elsee Target 415 </a></li>
+                                        <li><a href="#">Elsee Track </a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-5">
+                                    <a href="<?php echo MAIN_URL ?>/service2">Tầm soát di truyền</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Elsee Screen </a></li>
+                                        <li><a href="#">Elsee Screen Plus </a></li>
+                                        <li><a href="#">Elsee Screen Premium </a></li>
+                                    </ul>
+                                </li>
                                 <li class="menu-item-6"><a href="<?php echo MAIN_URL ?>/tuvan">Tư vấn</a></li>
                                 <li class="menu-item-7"><a href="<?php echo MAIN_URL ?>/contact">Liên hệ</a></li>                
                             </ul>                                            

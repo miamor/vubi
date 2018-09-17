@@ -211,8 +211,8 @@ INSERT INTO `tuvan` (`id`, `is_service`, `title`, `link`, `image`, `content`, `a
 (3, 0, '10 quận huyện tại Hà Nội được tầm soát ung thư đại trực tràng miễn phí 3', '10-quan-huyen-tai-ha-noi-duoc-tam-soat-ung-thu-dai-truc-trang-mien-phi', 'http://vubi.vn/vubi/images/anh6.jpg', 'Chương trình tầm soát ung thư đại trực tràng miễn phí do Bệnh viện Đa khoa Quốc tế Thu Cúc phối hợp', 1, 0, '2018-09-03 09:22:00'),
 (4, 0, '10 quận huyện tại Hà Nội được tầm soát ung thư đại trực tràng miễn phí 4', '10-quan-huyen-tai-ha-noi-duoc-tam-soat-ung-thu-dai-truc-trang-mien-phi', 'http://vubi.vn/vubi/images/anh6.jpg', 'Chương trình tầm soát ung thư đại trực tràng miễn phí do Bệnh viện Đa khoa Quốc tế Thu Cúc phối hợp', 1, 0, '2018-09-03 09:22:00'),
 (5, 0, 'Tin moi', 'tin-moi', 'http://vubi.vn/vubi/images/anh2.jpg', ',iumyntbr', 1, 0, '2018-09-03 02:49:54'),
-(6, 1, 'Dịch vụ 1', 'dich-vu-1', 'http://vubi.vn/vubi/images/anh6.jpg', 'Chương trình tầm soát ung thư đại trực tràng miễn phí do Bệnh viện Đa khoa Quốc tế Thu Cúc phối hợp', 1, 110, '2018-09-03 09:22:00'),
-(7, 2, 'Dịch vụ 2', '10-quan-huyen-tai-ha-noi-duoc-tam-soat-ung-thu-dai-truc-trang-mien-phi', 'http://vubi.vn/vubi/images/anh6.jpg', 'Chương trình tầm soát ung thư đại trực tràng miễn phí do Bệnh viện Đa khoa Quốc tế Thu Cúc phối hợp', 1, 100, '2018-09-03 09:22:00');
+(6, 1, 'Xét nghiệm ung thư', 'dich-vu-1', 'http://vubi.vn/vubi/images/anh6.jpg', 'Chương trình tầm soát ung thư đại trực tràng miễn phí do Bệnh viện Đa khoa Quốc tế Thu Cúc phối hợp', 1, 110, '2018-09-03 09:22:00'),
+(7, 2, 'Tầm soát di truyền', '10-quan-huyen-tai-ha-noi-duoc-tam-soat-ung-thu-dai-truc-trang-mien-phi', 'http://vubi.vn/vubi/images/anh6.jpg', 'Chương trình tầm soát ung thư đại trực tràng miễn phí do Bệnh viện Đa khoa Quốc tế Thu Cúc phối hợp', 1, 100, '2018-09-03 09:22:00');
 
 --
 -- Indexes for dumped tables

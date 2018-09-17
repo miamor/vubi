@@ -31,6 +31,7 @@ $config->addJS('dist', "{$page}/list.js");
                   <th>ID</th>
                   <th>Tên menu</th>
                   <th>Đường dẫn</th>
+                  <th>Menu cha</th>
                   <th>Thứ tự</th>
                   <th class="th-none">Action</th>
               </tr>

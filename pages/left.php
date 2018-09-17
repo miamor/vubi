@@ -11,7 +11,7 @@ $menuList = $menu->readAll(); ?>
                 if ($mO['child']) {
                     echo '<ul class="childs">';
                     foreach ($mO['child'] as $mOc) {
-                        echo '<li><a href="'.MAIN_URL.'/'.$mOc['child'].'">'.$mOc['title'].'</a></li>';
+                        echo '<li><a href="'.MAIN_URL.'/'.$mO['link'].'/'.$mOc['link'].'">'.$mOc['title'].'</a></li>';
                     };
                     echo '</ul>';
                 }

@@ -15,7 +15,7 @@ class About extends Config
         $query = "INSERT INTO
 					" . $this->table_name . "
 				SET
-					email = ?, logo = ?, phone = ?, about = ?, footer = ?";
+					email = ?, logo = ?, phone = ?, about = ?, footer = ?, info = ?";
 
         $stmt = $this->conn->prepare($query);
 
@@ -32,6 +32,7 @@ class About extends Config
         $stmt->bindParam(3, $this->phone);
         $stmt->bindParam(4, $this->about);
         $stmt->bindParam(5, $this->footer);
+        $stmt->bindParam(6, $this->info);
 
         // execute the query
         if ($stmt->execute()) {
@@ -47,7 +48,7 @@ class About extends Config
         $query = "UPDATE
 					" . $this->table_name . "
 				SET
-                    email = ?, logo = ?, phone = ?, about = ?, footer = ?, title = ?, name = ?, des = ?, header_image = ?";
+                    email = ?, logo = ?, phone = ?, about = ?, footer = ?, title = ?, name = ?, des = ?, header_image = ?, info = ?";
 
         $stmt = $this->conn->prepare($query);
 
@@ -63,6 +64,7 @@ class About extends Config
         //$this->footer = preg_replace('"', '\"', $this->footer);
         //$this->about = htmlspecialchars(strip_tags($this->about));
         //$this->footer = htmlspecialchars(strip_tags($this->footer));
+        //$this->info = htmlspecialchars(strip_tags($this->info));
 
         // bind parameters
         $stmt->bindParam(1, $this->email);
@@ -74,6 +76,7 @@ class About extends Config
         $stmt->bindParam(7, $this->name);
         $stmt->bindParam(8, $this->des);
         $stmt->bindParam(9, $this->header_image);
+        $stmt->bindParam(10, $this->info);
 
         // execute the query
         if ($stmt->execute()) {

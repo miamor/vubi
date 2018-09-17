@@ -90,12 +90,25 @@ $config->addJS('dist', "{$page}/index.js");
 </section><!-- /.content -->
 
 
+<section class="content">
+    <div class="form-group">
+        <div class="col-lg-3">
+            Giới thiệu
+        </div>
+        <div class="col-lg-9">
+            <textarea style="min-height:250px" class="form-control" name="info"></textarea>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</section><!-- /.content -->
+
+
 
 <!-- section.content Main content -->
 <section class="content">
     <div class="form-group">
         <div class="col-lg-3">
-            About
+            About section
         </div>
         <div class="col-lg-9">
             <textarea style="min-height:250px" class="form-control" name="about"></textarea>
@@ -109,7 +122,7 @@ $config->addJS('dist', "{$page}/index.js");
 <section class="content">
     <div class="form-group">
         <div class="col-lg-3">
-            Footer
+            Footer section
         </div>
         <div class="col-lg-9">
             <textarea style="min-height:250px" class="form-control" name="footer"></textarea>

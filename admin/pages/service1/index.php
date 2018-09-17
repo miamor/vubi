@@ -6,11 +6,11 @@ $config->addJS('dist', "{$page}/list.js");
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-  Dịch vụ 1
+  Xét nghiệm ung thư
   </h1>
   <ol class="breadcrumb">
     <li><a href="<?php echo MAIN_URL ?>"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Dịch vụ 1</li>
+    <li class="active">Xét nghiệm ung thư</li>
   </ol>
 </section>
 
@@ -22,7 +22,7 @@ $config->addJS('dist', "{$page}/list.js");
         <div class="btns right">
             <a href="<?php echo MAIN_URL ?>/service1/add" class="btn btn-primary">Thêm</a>
         </div>
-        <h3 class="box-title">Dịch vụ 1</h3>
+        <h3 class="box-title">Xét nghiệm ung thư</h3>
     </div>
     <div class="box-body">
         <table id="buyList" class="table table-bordered table-striped">

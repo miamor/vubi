@@ -108,13 +108,13 @@ $config->addJS('dist', 'main.js');?>
 
             <li class="treeview">
               <a href="<?php echo MAIN_URL ?>/service1">
-                <i class="fa fa-dashboard"></i> <span>Dịch vụ 1</span>
+                <i class="fa fa-dashboard"></i> <span>Xét nghiệm ung thư</span>
               </a>
             </li>
 
             <li class="treeview">
               <a href="<?php echo MAIN_URL ?>/service2">
-                <i class="fa fa-dashboard"></i> <span>Dịch vụ 2</span>
+                <i class="fa fa-dashboard"></i> <span>Tầm soát di truyền</span>
               </a>
             </li>
 
@@ -123,6 +123,12 @@ $config->addJS('dist', 'main.js');?>
                 <i class="fa fa-star"></i> <span>About</span>
               </a>
             </li>
+
+<li class="treeview">
+  <a href="<?php echo MAIN_URL ?>/menu">
+    <i class="fa fa-star"></i> <span>Menu trái</span>
+  </a>
+</li>
 
 <li class="treeview">
   <a href="<?php echo MAIN_URL ?>/services">
@@ -143,8 +149,8 @@ $config->addJS('dist', 'main.js');?>
 </li>
 
 <li class="treeview">
-  <a href="<?php echo MAIN_URL ?>/menu">
-    <i class="fa fa-star"></i> <span>Menu trái</span>
+  <a href="<?php echo MAIN_URL ?>/partners">
+    <i class="fa fa-star"></i> <span>Đối tác</span>
   </a>
 </li>
 

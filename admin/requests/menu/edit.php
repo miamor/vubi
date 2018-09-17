@@ -11,7 +11,7 @@ $menu->order = isset($_POST['order']) ? $_POST['order'] : null;
 
 //echo json_encode($_POST, JSON_UNESCAPED_UNICODE);
 
-if ($menu->id && $menu->title && $menu->image && $menu->content) {
+if ($menu->id && $menu->title && $menu->link) {
 	$edit = $menu->update();
 	if ($edit) {
 		echo 1;

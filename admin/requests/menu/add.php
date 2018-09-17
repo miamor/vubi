@@ -12,7 +12,7 @@ $menu->order = isset($_POST['order']) ? $_POST['order'] : null;
 
 //echo json_encode($_POST, JSON_UNESCAPED_UNICODE);
 
-if ($menu->title && $menu->link && $menu->order) {
+if ($menu->title && $menu->link) {
 	$add = $menu->create();
 	if ($add) {
 		echo 1;

@@ -1,5 +1,5 @@
 <?php
-class Partner extends Config
+class Partners extends Config
 {
 
     private $table_name = "partners";

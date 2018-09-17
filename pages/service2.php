@@ -8,8 +8,10 @@ if ($subpage) {
 	$news->id = $subpage;
     $news->readOne(2);
     
+    $related = $news->getRelated(2, $news->title, $news->id);
+
     echo $config->breadcumb(array(
-        array('link' => MAIN_URL.'/service2', 'title' => 'Dịch vụ 2'),
+        array('link' => MAIN_URL.'/service2', 'title' => 'Tầm soát di truyền'),
         array('link' => $news->link, 'title' => $news->title),
     ));
     
@@ -17,7 +19,7 @@ if ($subpage) {
     $newsList = $news->readAllServices(2);
 
     echo $config->breadcumb(array(
-        array('link'=>'service2', 'title'=>'Dịch vụ 2'),
+        array('link'=>'service2', 'title'=>'Tầm soát di truyền'),
     ));    
 }
 

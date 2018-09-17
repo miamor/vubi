@@ -13,6 +13,7 @@ $about->title = isset($_POST['title']) ? $_POST['title'] : null;
 $about->name = isset($_POST['name']) ? $_POST['name'] : null;
 $about->des = isset($_POST['des']) ? $_POST['des'] : null;
 $about->header_image = isset($_POST['header_image']) ? $_POST['header_image'] : null;
+$about->info = isset($_POST['info']) ? $_POST['info'] : null;
 
 if ($about->name && $about->title) {
     $update = $about->update();

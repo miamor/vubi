@@ -1,5 +1,5 @@
 <?php
-class Partner extends Config
+class Partners extends Config
 {
 
     private $table_name = "partners";
@@ -121,6 +121,13 @@ class Partner extends Config
 
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($row['id']) {
+            $this->id = $row['id'];
+            $this->title = $row['title'];
+            $this->image = $row['image'];
+            $this->link = $row['link'];
+        }
 
         return ($row['id'] ? $row : null);
     }
