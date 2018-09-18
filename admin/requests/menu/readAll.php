@@ -4,7 +4,9 @@ include 'objects/menu.php';
 
 $news = new Menu();
 
-$data = array('data' => $news->readAll());
+$type = $_GET['type'];
+
+$data = array('data' => $news->readAll($type));
 
 echo json_encode($data, JSON_UNESCAPED_UNICODE);
 

@@ -126,7 +126,7 @@ $config->addJS('dist', 'main.js');?>
 
 <li class="treeview">
   <a href="<?php echo MAIN_URL ?>/menu">
-    <i class="fa fa-star"></i> <span>Menu trái</span>
+    <i class="fa fa-star"></i> <span>Menu</span>
   </a>
 </li>
 

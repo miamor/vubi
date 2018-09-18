@@ -1,6 +1,3 @@
-<?php include 'objects/menu.php';
-$menu = new Menu();
-$menuList = $menu->readAll(); ?>
 <div class="left-content">
     <div>
         <div class="left-menu">

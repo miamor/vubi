@@ -1,6 +1,7 @@
 <?php
 //include 'include/config.php';
 include 'objects/menu.php';
+$type = $_GET['type'];
 
 $menu = new Menu();
 $menu->id = isset($_POST['id']) ? $_POST['id'] : null;
@@ -12,7 +13,7 @@ $menu->order = isset($_POST['order']) ? $_POST['order'] : null;
 //echo json_encode($_POST, JSON_UNESCAPED_UNICODE);
 
 if ($menu->id && $menu->title && $menu->link) {
-	$edit = $menu->update();
+	$edit = $menu->update($type);
 	if ($edit) {
 		echo 1;
 	} else echo 0;

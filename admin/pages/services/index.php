@@ -20,7 +20,7 @@ $config->addJS('dist', "{$page}/list.js");
 <div class="box">
     <div class="box-header">
         <div class="btns right">
-            <a href="<?php echo MAIN_URL ?>/services/add" class="btn btn-primary">Thêm</a>
+            <a href="<?php echo MAIN_URL ?>/services?mode=add" class="btn btn-primary">Thêm</a>
         </div>
         <h3 class="box-title">Dịch vụ</h3>
     </div>

@@ -2,15 +2,23 @@
 class Menu extends Config
 {
 
-    private $table_name = "leftmenu";
+    private $table_name_left = "leftmenu";
+    private $table_name_top = "menu";
+    private $table_name = "";
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    public function create()
+    public function create ($type)
     {
+        if ($type == 'left') {
+            $this->table_name = $this->table_name_left;
+        } else {
+            $this->table_name = $this->table_name_top;
+        }
+
         //write query
         $query = "INSERT INTO
 					" . $this->table_name . "
@@ -38,8 +46,14 @@ class Menu extends Config
 
     }
 
-    public function update()
+    public function update ($type)
     {
+        if ($type == 'left') {
+            $this->table_name = $this->table_name_left;
+        } else {
+            $this->table_name = $this->table_name_top;
+        }
+
         $query = "UPDATE
 					" . $this->table_name . "
 				SET
@@ -69,8 +83,13 @@ class Menu extends Config
 
     }
 
-    public function delete()
+    public function delete ($type)
     {
+        if ($type == 'left') {
+            $this->table_name = $this->table_name_left;
+        } else {
+            $this->table_name = $this->table_name_top;
+        }
 
         $query = "DELETE FROM " . $this->table_name . " WHERE id = ?";
 
@@ -86,8 +105,14 @@ class Menu extends Config
 
     }
 
-    public function readAll()
+    public function readAll ($type)
     {
+        if ($type == 'left') {
+            $this->table_name = $this->table_name_left;
+        } else {
+            $this->table_name = $this->table_name_top;
+        }
+
         $query = "SELECT
 				    C.id,C.title, C.orders,C.link,
                     P.title as parent_title,
@@ -111,8 +136,14 @@ class Menu extends Config
         return $this->all_list;
     }
 
-    public function readOne()
+    public function readOne ($type)
     {
+        if ($type == 'left') {
+            $this->table_name = $this->table_name_left;
+        } else {
+            $this->table_name = $this->table_name_top;
+        }
+        
         $query = "SELECT
 					*
 				FROM

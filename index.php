@@ -10,6 +10,11 @@ include 'objects/about.php';
 $about = new About();
 $info = $about->getInfo();
 
+include 'objects/menu.php';
+$menu = new Menu();
+$menuList = $menu->readAll('left');
+$menuTop = $menu->readAll('top');
+
 if ($page != 'index' && !file_exists('pages/' . $page . '.php')) {
     $page = 'error';
 }

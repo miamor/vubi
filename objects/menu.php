@@ -2,16 +2,23 @@
 class Menu extends Config
 {
 
-    private $table_name = "leftmenu";
+    private $table_name_left = "leftmenu";
+    private $table_name_top = "menu";
+    private $table_name = "";
 
     public function __construct()
     {
         parent::__construct();
     }
 
-    public function readAll()
+    public function readAll ($type)
     {
-        $cond = '';
+        if ($type == 'left') {
+            $this->table_name = $this->table_name_left;
+        } else {
+            $this->table_name = $this->table_name_top;
+        }
+
         $query = "SELECT
 				    *
 				FROM
@@ -40,8 +47,14 @@ class Menu extends Config
         return $this->all_list;
     }
 
-    public function readOne()
+    public function readOne ($type)
     {
+        if ($type == 'left') {
+            $this->table_name = $this->table_name_left;
+        } else {
+            $this->table_name = $this->table_name_top;
+        }
+        
         $query = "SELECT
 					*
 				FROM

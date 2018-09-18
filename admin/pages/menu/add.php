@@ -1,8 +1,4 @@
 <?php
-$taxi->readAllSimple();
-
-$config->addJS(-1, 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js');
-$config->addJS('plugins', 'daterangepicker/daterangepicker.js');
 $config->addJS('dist', "{$page}/{$mode}.js");
 ?>
 

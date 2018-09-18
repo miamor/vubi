@@ -1,10 +1,11 @@
 <?php
 //include '../../include/config.php';
-include 'objects/services.php';
+include 'objects/menu.php';
+$type = $_GET['type'];
 
-$services = new Services();
+$menu = new Menu();
 
-$services->id = isset($_GET['id']) ? $_GET['id'] : null;
+$menu->id = isset($_GET['id']) ? $_GET['id'] : null;
 
-if ($services->id) echo $services->delete();
+if ($menu->id) echo $menu->delete($type);
 else echo -1;

@@ -3,8 +3,9 @@ include 'objects/menu.php';
 $menu = new Menu();
 
 if ($subpage) {
+    $type = $_GET['type'];
 	$menu->id = $subpage;
-	$menu->readOne();
+	$menu->readOne($type);
 }
 
 if ($mode) {

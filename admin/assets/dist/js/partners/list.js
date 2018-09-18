@@ -54,7 +54,7 @@ $(document).ready(function () {
 		],
         "ordering": false,
         "fnRowCallback": function (nRow, aData, iDisplayIndex) {
-            console.log(aData);
+            //console.log(aData);
         }
 	})
 })
