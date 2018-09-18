@@ -99,7 +99,7 @@ $partnersList = $partners->readAll(); ?>
                 <div class="tuvan">
                     <div>
                         <div class="module-title-2">
-                            <h3><span>Tư vấn trực tuyến</span></h3>
+                            <h3><span>Dịch vụ</span></h3>
                         </div>
                         <div class="tuvan-content">
                         <?php foreach ($tuvanNewsHighlight as $tvN) { ?>
@@ -108,7 +108,7 @@ $partnersList = $partners->readAll(); ?>
                                     <a href="<?php echo $tvN['link'] ?>"><img src="<?php echo $tvN['image'] ?>"></a>
                                     <h3><a href="#<?php echo $tvN['link'] ?>"><?php echo $tvN['title'] ?></a></h3>
                                     <p><?php echo $tvN['content'] ?></p>
-                                    <a href="<?php echo $tvN['link'] ?>" class="readmore-2">Xem them</a>
+                                    <a href="<?php echo $tvN['link'] ?>" class="readmore-2">Xem thêm</a>
                                 </div>
                             </div>
                         <?php } ?>
@@ -119,7 +119,7 @@ $partnersList = $partners->readAll(); ?>
                 <div class="tintuc">
                     <div>
                         <div class="module-title-2">
-                            <h3><span>Tư vấn trực tuyến</span></h3>
+                            <h3><span>Tin tức</span></h3>
                         </div>
                         <div class="tintuc-content">
                         <?php foreach ($tuvanNews as $tvN) { ?>
@@ -147,7 +147,7 @@ $partnersList = $partners->readAll(); ?>
             <div>
                 <div class="home-row5-left">
                     <div>
-                        <a href="#"><img src="images/video.jpg"></a>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-VhkseVujEQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="home-row5-right">
