@@ -62,7 +62,7 @@ $config->addJS('dist', "{$page}/add.js");
             Ngày đăng (YYYY-mm-dd H:i:s)
         </div>
         <div class="col-lg-9">
-            <input type="text" class="form-control" name="date" value="<?php echo date('Y-m-d h:i:s a', time()) ?>"/>
+            <input type="text" class="form-control" name="date" value="<?php echo date('Y-m-d H:i:s', time()) ?>"/>
         </div>
 
         <div class="clearfix"></div>
