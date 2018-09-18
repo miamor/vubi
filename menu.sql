@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `leftmenu`
+-- Table structure for table `menu`
 --
 
-CREATE TABLE `leftmenu` (
+CREATE TABLE `menu` (
   `id` int(255) NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `link` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -37,24 +37,33 @@ CREATE TABLE `leftmenu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `leftmenu`
+-- Dumping data for table `menu`
 --
 
-INSERT INTO `leftmenu` (`id`, `title`, `link`, `parent`, `orders`) VALUES
-(1, 'Dành cho trẻ em', 'for-children', 0, 1),
-(2, 'Dành cho phụ nữ', 'for-woman', 0, 2),
-(3, 'Bé gái', 'girls', 1, 1),
-(4, 'Bé trai', 'boys', 1, 1),
-(5, 'Dành cho người già', 'for-elderly', 0, 3);
+INSERT INTO `menu` (`id`, `title`, `link`, `parent`, `orders`) VALUES
+(1, 'Trang chủ', 'http://vubi.vn/vubi', 0, 1),
+(2, 'Giới thiệu', 'http://vubi.vn/vubi/about', 0, 2),
+(3, 'Tin tức', 'http://vubi.vn/vubi/news', 0, 3),
+(4, 'Xét nghiệm ung thư', 'http://vubi.vn/vubi/service1', 0, 4),
+(5, 'Tầm soát di truyền', 'http://vubi.vn/vubi/service2', 0, 5),
+(6, 'Tư vấn', 'http://vubi.vn/vubi/tuvan', 0, 6),
+(7, 'Liên hệ', 'http://vubi.vn/vubi/contact', 0, 7),
+
+(8, 'Elsee Target 315', 'http://vubi.vn/vubi/contact', 4, 8),
+(9, 'Elsee Target 415', 'http://vubi.vn/vubi/contact', 4, 9),
+(10, 'Elsee Track', 'http://vubi.vn/vubi/contact', 4, 10),
+(11, 'Elsee Screen', 'http://vubi.vn/vubi/contact', 5, 11),
+(12, 'Elsee Screen Plus', 'http://vubi.vn/vubi/contact', 5, 12),
+(13, 'Elsee Screen Premium', 'http://vubi.vn/vubi/contact', 5, 13);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `leftmenu`
+-- Indexes for table `menu`
 --
-ALTER TABLE `leftmenu`
+ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -62,9 +71,9 @@ ALTER TABLE `leftmenu`
 --
 
 --
--- AUTO_INCREMENT for table `leftmenu`
+-- AUTO_INCREMENT for table `menu`
 --
-ALTER TABLE `leftmenu`
+ALTER TABLE `menu`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 

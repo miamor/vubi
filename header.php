@@ -15,6 +15,12 @@ $config = new Config();
     <link href="<?php echo MAIN_URL ?>/access/css/style.css" type="text/css" rel="stylesheet">
     <link href="<?php echo MAIN_URL ?>/access/css/responsive.css" type="text/css" rel="stylesheet">
     <script src="<?php echo MAIN_URL ?>/access/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+
+    <style>
+        .header-content .logo a{
+            background-image: url('<?php echo $info['logo'] ?>')!important
+        }
+    </style>
 </head>
 <body>
     <div class="main-header">
