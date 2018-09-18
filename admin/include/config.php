@@ -5,7 +5,7 @@ error_reporting(E_ERROR | E_PARSE);
 $__pattern = '/vubi/admin';
 
 define('MAIN_PATH', './');
-define('HOST_URL', '//localhost'.$__pattern);
+define('HOST_URL', '//vubi.vn'.$__pattern);
 define('MAIN_URL', 'http:'.HOST_URL);
 define('ASSETS', MAIN_URL.'/assets');
 define('CSS', ASSETS.'/dist/css');
@@ -42,8 +42,9 @@ if (check($__page, 'requests')) {
 	$config->__request = explode('.', end($hiu))[0];
 }
 
-if (isset($config->__request) && $config->__request) header('Content-Type: application/json; charset=utf-8');
-else header('Content-Type: text/html; charset=utf-8');
+if (isset($config->__request) && $config->__request) {
+    header('Content-Type: application/json; charset=utf-8');
+} else header('Content-Type: text/html; charset=utf-8');
 // End config
 
 class Config {
@@ -52,7 +53,7 @@ class Config {
 	private $host = "localhost";
 	private $db_name = "vubi";
 	private $username = "root";
-	private $password = "";
+	private $password = "mta@ppa123";
 	private $port = "3306";
 	protected $conn;
 	public $u;

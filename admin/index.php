@@ -34,7 +34,7 @@ if (!$config->u && $page == 'requests' && $__pageAr[1] != 'login') {
     }
 
     if ($page == 'requests') {
-        header("Content-type:application/json; charset=utf-8");
+//        header("Content-type:application/json; charset=utf-8");
         include 'requests/' . $__pageAr[1] . '/' . $__pageAr[2];
     }
 
