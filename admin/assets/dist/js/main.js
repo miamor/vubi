@@ -304,8 +304,8 @@ function flatApp() {
     if ($('.bootstrap-validator-form').length) validator();
     sce('#main-content');
     //if ($('.chosen-select').length) choosen();
-    if ($(':checkbox').length) $(':checkbox').not('[data-toggle="switch"], .onoffswitch-checkbox').checkbox();
-    if ($(':radio').length) $(':radio').radio();
+    //if ($(':checkbox').length) $(':checkbox').not('[data-toggle="switch"], .onoffswitch-checkbox').checkbox();
+    //if ($(':radio').length) $(':radio').radio();
 }
 
 function openInNewTab(url) {
