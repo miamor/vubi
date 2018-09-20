@@ -21,10 +21,10 @@
     </div>
 
 
-    <script src="<?php echo MAIN_URL ?>/access/js/jquery.magnific-popup.js"></script>
-    <script src="<?php echo MAIN_URL ?>/access/js/slick.js" type="text/javascript"></script>
-    <script src="<?php echo MAIN_URL ?>/access/js/responsiveslides.min.js" type="text/javascript"></script>
-    <script src="<?php echo MAIN_URL ?>/access/js/script.js" type="text/javascript"></script>
+    <script src="<?php echo MAIN_URL ?>/assets/js/jquery.magnific-popup.js"></script>
+    <script src="<?php echo MAIN_URL ?>/assets/js/slick.js" type="text/javascript"></script>
+    <script src="<?php echo MAIN_URL ?>/assets/js/responsiveslides.min.js" type="text/javascript"></script>
+    <script src="<?php echo MAIN_URL ?>/assets/js/script.js" type="text/javascript"></script>
 
     <?php $config->echoJS() ?>
 </body>
