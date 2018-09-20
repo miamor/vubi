@@ -26,6 +26,6 @@
     <script src="<?php echo MAIN_URL ?>/access/js/responsiveslides.min.js" type="text/javascript"></script>
     <script src="<?php echo MAIN_URL ?>/access/js/script.js" type="text/javascript"></script>
 
-    <?php //$config->echoJS() ?>
+    <?php $config->echoJS() ?>
 </body>
 </html>

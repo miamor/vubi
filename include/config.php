@@ -7,10 +7,10 @@ $__pattern = '/vubi';
 define('MAIN_PATH', './');
 define('HOST_URL', '//localhost' . $__pattern);
 define('MAIN_URL', 'http:' . HOST_URL);
-define('ASSETS', MAIN_URL . '/assets');
-define('CSS', ASSETS . '/dist/css');
-define('JS', ASSETS . '/dist/js');
-define('IMG', ASSETS . '/dist/img');
+define('ASSETS', MAIN_URL . '/access');
+define('CSS', ASSETS . '/css');
+define('JS', ASSETS . '/js');
+define('IMG', ASSETS . '/img');
 define('PLUGINS', ASSETS . '/plugins');
 
 $__page = str_replace($__pattern . '/', '', $_SERVER['REQUEST_URI']);
@@ -184,8 +184,8 @@ class Config
         if ($type == -1) {
             $this->JS .= $link . '|';
         } else {
-            if ($type == 'dist') {
-                $type = 'dist/js';
+            if ($type == 'access') {
+                $type = 'js';
             }
             $this->JS .= ASSETS . '/' . $type . '/' . $link . '|';
         }

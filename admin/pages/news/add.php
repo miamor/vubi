@@ -1,6 +1,7 @@
 <?php
 $user->readAllSimple();
 
+$config->addJS('plugins', "sceditor/minified/jquery.sceditor.bbcode.min.js");
 $config->addJS('dist', "{$page}/add.js");
 ?>
 
@@ -70,10 +71,20 @@ $config->addJS('dist', "{$page}/add.js");
 
     <div class="form-group">
         <div class="col-lg-3 control-label">
+            Nội dung (in đậm)
+        </div>
+        <div class="col-lg-9">
+            <textarea name="highlight_content" class="sce-editor form-control"></textarea>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-lg-3 control-label">
             Nội dung
         </div>
         <div class="col-lg-9">
-            <textarea name="content" class="form-control"></textarea>
+            <textarea name="content" class="sce-editor form-control"></textarea>
         </div>
         <div class="clearfix"></div>
     </div>

@@ -3,6 +3,7 @@ $user->readAllSimple();
 
 //$config->addJS(-1, 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js');
 //$config->addJS('plugins', 'daterangepicker/daterangepicker.js');
+$config->addJS('plugins', "sceditor/minified/jquery.sceditor.bbcode.min.js");
 $config->addJS('dist', "{$page}/edit.js");
 ?>
 
@@ -51,10 +52,14 @@ $config->addJS('dist', "{$page}/edit.js");
         <div class="col-lg-9">
             <select class="chosen-select form-control" name="author">
             <?php foreach ($user->all_list as $oneTaxi) {
-                if ($oneTaxi['id'] == $news->author) $selected = 'selected';
-                else $selected = '';
-                echo '<option '.$selected.' value="'.$oneTaxi['id'].'">'.$oneTaxi['username'].'</option>';
-            } ?>
+    if ($oneTaxi['id'] == $news->author) {
+        $selected = 'selected';
+    } else {
+        $selected = '';
+    }
+
+    echo '<option ' . $selected . ' value="' . $oneTaxi['id'] . '">' . $oneTaxi['username'] . '</option>';
+}?>
             </select>
         </div>
         <div class="clearfix"></div>
@@ -73,10 +78,20 @@ $config->addJS('dist', "{$page}/edit.js");
 
     <div class="form-group">
         <div class="col-lg-3 control-label">
+            Nội dung (in đậm)
+        </div>
+        <div class="col-lg-9">
+            <textarea name="highlight_content" class="sce-editor form-control"><?php echo $news->highlight_content ?></textarea>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-lg-3 control-label">
             Nội dung
         </div>
         <div class="col-lg-9">
-            <textarea name="content" class="form-control"><?php echo $news->content ?></textarea>
+            <textarea name="content" class="sce-editor form-control"><?php echo $news->content ?></textarea>
         </div>
         <div class="clearfix"></div>
     </div>

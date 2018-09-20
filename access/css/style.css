@@ -10,10 +10,10 @@ img{
 body {
     line-height: 150%;
     color: #535659;
-    font-size: 14px;
     font-family: 'roboto', sans-serif;
+    /*font-size: 14px;
     font-weight: 300;
-    background: #fff;
+    background: #fff;*/
 }
 p{
     margin: 10px 0;
@@ -532,6 +532,7 @@ div.left-menu{
     font-weight: 400;
     padding: 15px 25px;
     position: relative;
+    margin-top:-1px
 }
 .left-menu>ul>li{
     background: #338d5c;
@@ -560,7 +561,7 @@ div.left-menu{
 .left-menu>ul>li>ul{
     /*display: none;*/
     border:solid #ddd;
-    border-width:0 1px;
+    border-width:0 1px 1px;
     background:#fff;
     margin:15px -25px -15px
 }
@@ -598,11 +599,16 @@ div.left-menu{
     float: right;
 }
 .title-name{
-    font-size: 18px;
+    font-size: 22px;
+    line-height:25px;
     text-transform: uppercase;
     font-weight: 500;
     margin: 0;
     padding-bottom: 15px;
+}
+.sapo{
+    font-size:18px;
+    line-height: 22px
 }
 .right-product table{
     width: 100%;
