@@ -10,6 +10,8 @@
                 </div>
             </div>
 
+                <?php include 'left.php' ?>
+                <div class="right-content">
 
             <div class="right-content-item gui-cauhoi">
                 <div style="margin-bottom:20px;">
@@ -29,7 +31,6 @@
                     </ul>
                 </div>
             </div>
-
             <div class="right-content-item gui-cauhoi contact-detail">
                 <h3 class="right-content-title dat-cauhoi-title">Liên hệ</h3>
                 <div style="clear: both;"></div>
@@ -37,7 +38,7 @@
                 <form id="contactForm" action="" method="POST" style="padding-top:30px">
                     <ul class="form-list">
 										<li class="fields">
-											<div class="input-box">
+</div>											<div class="input-box">
 												<input name="name" id="name" title="Name" value="" placeholder="Tên của bạn" class="input-text required-entry" type="text" required="">
 											</div>
 											<div class="input-box">
