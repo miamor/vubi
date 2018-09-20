@@ -17,7 +17,7 @@ $config->addJS('dist', 'main.js');?>
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="<?php echo ASSETS ?>/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?php echo CSS ?>/font.min.css">
+    <link rel="stylesheet" href="<?php echo ASSETS ?>/dist/css/font.min.css">
     <!-- iCheck for checkboxes and radio inputs -->
     <link rel="stylesheet" href="<?php echo PLUGINS ?>/iCheck/all.css">
     <!-- Select2 -->
@@ -27,10 +27,10 @@ $config->addJS('dist', 'main.js');?>
     <!-- Daterange picker -->
     <link rel="stylesheet" href="<?php echo PLUGINS ?>/daterangepicker/daterangepicker-bs3.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="<?php echo CSS ?>/AdminLTE.min.css">
+    <link rel="stylesheet" href="<?php echo ASSETS ?>/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="<?php echo CSS ?>/skins/skin-red.min.css">
+    <link rel="stylesheet" href="<?php echo ASSETS ?>/dist/css/skins/skin-red.min.css">
 
 	<script src="<?php echo MAIN_URL ?>/assets/jquery/jquery-2.2.3.min.js"></script>
 	<script src="<?php echo MAIN_URL ?>/assets/jquery/jquery-ui.min.js"></script>

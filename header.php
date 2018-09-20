@@ -10,11 +10,11 @@ $config = new Config();
     <meta name="description" content="<?php echo $info['des'] ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <link href="<?php echo MAIN_URL ?>/access/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
-    <link href="<?php echo MAIN_URL ?>/access/css/slick.css" type="text/css" rel="stylesheet"/>
-    <link href="<?php echo MAIN_URL ?>/access/css/style.css" type="text/css" rel="stylesheet">
-    <link href="<?php echo MAIN_URL ?>/access/css/responsive.css" type="text/css" rel="stylesheet">
-    <script src="<?php echo MAIN_URL ?>/access/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <link href="<?php echo MAIN_URL ?>/assets/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="<?php echo MAIN_URL ?>/assets/css/slick.css" type="text/css" rel="stylesheet"/>
+    <link href="<?php echo MAIN_URL ?>/assets/css/style.css" type="text/css" rel="stylesheet">
+    <link href="<?php echo MAIN_URL ?>/assets/css/responsive.css" type="text/css" rel="stylesheet">
+    <script src="<?php echo MAIN_URL ?>/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
     <script>var MAIN_URL = '<?php echo MAIN_URL ?>'; </script>
 
     <style>
