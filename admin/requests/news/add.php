@@ -9,6 +9,7 @@ $news->image = isset($_POST['image']) ? $_POST['image'] : null;
 $news->author = isset($_POST['author']) ? $_POST['author'] : null;
 $news->date = isset($_POST['date']) ? $_POST['date'] : null;
 $news->content = isset($_POST['content']) ? $_POST['content'] : null;
+$news->highlight_content = isset($_POST['highlight_content']) ? $_POST['highlight_content'] : null;
 $news->price = 0;
 $news->is_service = 0;
 

@@ -73,10 +73,20 @@ $config->addJS('dist', "{$page}/edit.js");
 
     <div class="form-group">
         <div class="col-lg-3 control-label">
+            Nội dung (in đậm)
+        </div>
+        <div class="col-lg-9">
+            <textarea name="highlight_content" class="sce-editor form-control"><?php echo $news->highlight_content ?></textarea>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-lg-3 control-label">
             Nội dung
         </div>
         <div class="col-lg-9">
-            <textarea name="content" class="form-control"><?php echo $news->content ?></textarea>
+            <textarea name="content" class="sce-editor form-control"><?php echo $news->content ?></textarea>
         </div>
         <div class="clearfix"></div>
     </div>

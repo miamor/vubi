@@ -147,6 +147,7 @@ class News extends Config
             }
             $this->image = $row['image'];
             $this->content = $row['content'];
+            $this->highlight_content = $row['highlight_content'];
             $this->author = $this->getUserInfo($row['author']);
             $this->date = $row['date'];
             $this->is_service = $row['is_service'];

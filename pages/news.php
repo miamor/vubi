@@ -5,6 +5,9 @@ $user = new User();
 $news = new News();
 
 if ($subpage) {
+    $config->addJS('plugins', 'sceditor/minified/jquery.sceditor.bbcode.min.js');
+    $config->addJS('access', 'news/view.js');
+
 	$news->id = $subpage;
     $news->readOne(0);
 

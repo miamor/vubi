@@ -15,7 +15,7 @@ class News extends Config
         $query = "INSERT INTO
 					" . $this->table_name . "
 				SET
-					title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?, is_service = ?";
+					title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?, is_service = ?, highlight_content = ?";
 
         $stmt = $this->conn->prepare($query);
 
@@ -39,6 +39,7 @@ class News extends Config
         $stmt->bindParam(6, $this->date);
         $stmt->bindParam(7, $this->price);
         $stmt->bindParam(8, $this->is_service);
+        $stmt->bindParam(9, $this->highlight_content);
 
         // execute the query
         if ($stmt->execute()) {
@@ -54,7 +55,7 @@ class News extends Config
         $query = "UPDATE
 					" . $this->table_name . "
 				SET
-                    title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?
+                    title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?, highlight_content = ?
 				WHERE
 					id = ?";
 
@@ -78,7 +79,8 @@ class News extends Config
         $stmt->bindParam(5, $this->author);
         $stmt->bindParam(6, $this->date);
         $stmt->bindParam(7, $this->price);
-        $stmt->bindParam(8, $this->id);
+        $stmt->bindParam(8, $this->highlight_content);
+        $stmt->bindParam(9, $this->id);
         
 
         // execute the query
@@ -197,6 +199,7 @@ class News extends Config
             $this->link = $row['link'];
             $this->image = $row['image'];
             $this->content = $row['content'];
+            $this->highlight_content = $row['highlight_content'];
             $this->author = $this->getUserInfo($row['author']);
             $this->date = $row['date'];
             $this->price = $row['price'];
