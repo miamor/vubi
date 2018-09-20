@@ -18,6 +18,6 @@ $(document).ready(function() {
     var h_htmlFragment = h_instance.fromBBCode(h_instance.val(), true);
     $('.news-highlight_content').html(h_htmlFragment);
 
-    $('.sceditor-container').hide();
+    $('.sceditor-container').remove();
 });
 

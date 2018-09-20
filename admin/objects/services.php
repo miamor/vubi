@@ -22,7 +22,7 @@ class Services extends Config
         // posted values
         $this->title = htmlspecialchars(strip_tags($this->title));
         $this->image = htmlspecialchars(strip_tags($this->image));
-        $this->content = htmlspecialchars(strip_tags($this->content));
+        //$this->content = htmlspecialchars(strip_tags($this->content));
 
         // bind parameters
         $stmt->bindParam(1, $this->title);
@@ -52,7 +52,7 @@ class Services extends Config
         // posted values
         $this->title = htmlspecialchars(strip_tags($this->title));
         $this->image = htmlspecialchars(strip_tags($this->image));
-        $this->content = htmlspecialchars(strip_tags($this->content));
+        //$this->content = htmlspecialchars(strip_tags($this->content));
 
         // bind parameters
         $stmt->bindParam(1, $this->title);

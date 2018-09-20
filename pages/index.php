@@ -1,20 +1,26 @@
 <?php 
+$config->addJS('plugins', 'sceditor/minified/jquery.sceditor.bbcode.min.js');
+$config->addJS('', 'home.js');
+
 include 'objects/doctors.php';
 include 'objects/news.php';
 include 'objects/feedback.php';
 include 'objects/partners.php';
+include 'objects/services.php';
 
 $news = new News();
 $doctors = new Doctors();
 $feedback = new Feedback();
 $partners = new Partners();
+$service = new Services();
 
 $tuvanNewsHighlight = $news->readMany(0, 2);
 $tuvanNews = $news->readMany(2, 2);
 
 $doctorsList = $doctors->readAll();
 $feedbackList = $feedback->readAll();
-$partnersList = $partners->readAll(); ?>
+$partnersList = $partners->readAll();
+$servicesList = $service->readAll(); ?>
 
     <div class="main-slideshow">
         <div class="slideshow">
@@ -32,27 +38,16 @@ $partnersList = $partners->readAll(); ?>
                     <h2>Dịch vụ</h2>
                 </div>
                 <div class="list-about">
-                    <div class="home-about-item home-about-item-1">
-                        <div>
-                            <img src="images/icon1.png" alt="Tư vấn và phân tích">
-                            <h3>Tư vấn và phân tích</h3>
-                            <p>Tư vấn và phân tích gien thế hệ mới tại các phòng xét nghiệm hiện đại của Hoa Kỳ​</p>
-                        </div>
+                <?php foreach ($servicesList as $sK => $sO) {
+                    echo '<div class="home-about-item home-about-item-'.$sK.'">
+                    <div>
+                        <img src="'.$sO['image'].'" alt="'.$sO['title'].'">
+                        <h3>'.$sO['title'].'</h3>
+                        <p>'.$sO['content'].'</p>
+                        <textarea id="sv'.$sK.'">'.$sO['content'].'</textarea>
                     </div>
-                    <div class="home-about-item home-about-item-2">
-                        <div>
-                            <img src="images/icon2.png" alt="Quy Trình Giải Mã Gien">
-                            <h3>Quy Trình Giải Mã Gien</h3>
-                            <p>Quy Trình Giải Mã Gien tiên tiến từ các trung tâm ung thư và di truyền học uy tín của Hoa Kỳ</p>
-                        </div>
-                    </div>
-                    <div class="home-about-item home-about-item-3">
-                        <div>
-                            <img src="images/icon3.png" alt="Hỗ trợ từ các chuyên gia ung thư">
-                            <h3>Hỗ trợ từ các chuyên gia ung thư</h3>
-                            <p>Tư vấn và phân tích gien thế hệ mới tại các phòng xét nghiệm hiện đại của Hoa Kỳ​</p>
-                        </div>
-                    </div>
+                </div>';
+                } ?>
                 </div>
             </div> 
         </div>

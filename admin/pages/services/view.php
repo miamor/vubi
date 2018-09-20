@@ -43,7 +43,7 @@ $config->addJS('dist', "{$page}/edit.js");
             Mô tả
         </div>
         <div class="col-lg-9">
-            <textarea name="content" class="form-control"><?php echo $news->content ?></textarea>
+            <textarea name="content" class="sce-editor form-control"><?php echo $news->content ?></textarea>
         </div>
         <div class="clearfix"></div>
     </div>

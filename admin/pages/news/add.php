@@ -1,7 +1,6 @@
 <?php
 $user->readAllSimple();
 
-$config->addJS('plugins', "sceditor/minified/jquery.sceditor.bbcode.min.js");
 $config->addJS('dist', "{$page}/add.js");
 ?>
 

@@ -42,10 +42,11 @@ $config->addJS('dist', "{$page}/{$mode}.js");
             Mô tả
         </div>
         <div class="col-lg-9">
-            <textarea name="content" class="form-control"></textarea>
+            <textarea name="content" class="sce-editor form-control"></textarea>
         </div>
         <div class="clearfix"></div>
     </div>
+
 
     <div class="add-form-submit center">
         <input type="reset" value="Nhập lại"/>
