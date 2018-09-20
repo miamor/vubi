@@ -101,8 +101,14 @@ $servicesList = $service->readAll(); ?>
                             <div class="tuvan-content-item">
                                 <div>
                                     <a href="<?php echo $tvN['link'] ?>"><img src="<?php echo $tvN['image'] ?>"></a>
-                                    <h3><a href="#<?php echo $tvN['link'] ?>"><?php echo $tvN['title'] ?></a></h3>
-                                    <p><?php echo $tvN['content'] ?></p>
+                                    <h3><a href="<?php echo $tvN['link'] ?>"><?php echo $tvN['title'] ?></a></h3>
+                                    <p>
+                                        <?php if ($tvN['highlight_content']) {
+                                            echo substr($tvN['highlight_content'], 0, 300)
+                                        } else {
+                                            echo substr($tvN['content'], 0, 300)
+                                        } ?>
+                                    </p>
                                     <a href="<?php echo $tvN['link'] ?>" class="readmore-2">Xem thêm</a>
                                 </div>
                             </div>
