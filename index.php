@@ -15,6 +15,10 @@ $menu = new Menu();
 $menuList = $menu->readAll('left');
 $menuTop = $menu->readAll('top');
 
+
+if ($page == 'xet-nghiem-ung-thu') $page = 'service1';
+else if ($page == 'tam-soat-di-truyen') $page = 'service2';
+
 if ($page != 'index' && !file_exists('pages/' . $page . '.php')) {
     $page = 'error';
 }
