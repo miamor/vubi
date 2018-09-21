@@ -312,3 +312,10 @@ function mc_decrypt($decrypt, $key)
     return $decrypted;
 }
 
+
+function remove_bbcode($string)
+{
+    $pattern = '|[[\/\!]*?[^\[\]]*?]|si';
+    $replace = '';
+    return preg_replace($pattern, $replace, $string);
+}

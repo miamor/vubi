@@ -120,7 +120,7 @@
 		display: block;
 		position: absolute;
 		top: 30px;
-		left: 0px;
+		right: 0px;
 	}
 	.mobile-menu span{
 		display: block;
@@ -289,8 +289,8 @@
 		padding-bottom: 20px;
 	}
 	.menu-content > ul.main-menu > li ul{
-	    display: block;
-	    padding-left: 25px;
+	    display: none!important;
+        padding-left: 25px;
 	}
 
 	.menu-content > ul.main-menu > li ul li{
@@ -340,7 +340,7 @@
 		display: none;
 	}
 	.head-top-left ul li:last-child{
-		margin: 0;
+		margin: 23px 0 -23px;
 		padding: 0;
 	}
 	.head-top-right{

@@ -54,6 +54,10 @@ a{
     margin: auto;
     position: relative;
 }
+.main-news{
+    max-width:942px
+}
+
 .header-top{
     background: #338d5c;
     height: 46px;
@@ -1325,12 +1329,16 @@ div.left-news a{
     line-height: 0;
 }
 .home-news-item img{
-    height:146px
+    *height:146px;
+    height:162px;
+    width:271px
 }
 .home-news-item{
     float: left;
     width: 33.33%;
-    height:245px
+    *height:245px;
+    *height:381px;
+    margin:10px auto
 }
 .cat-news-item{
 	margin-bottom: 15px;
@@ -1346,7 +1354,7 @@ div.left-news a{
     text-transform: uppercase;
     font-size: 16px;
     margin: 0;
-    padding: 15px 0;
+    padding: 8px 0 0;
     font-weight: 400;
 }
 .home-news-item h3 a{
@@ -1446,3 +1454,8 @@ div.left-news a{
 
 .related-news{margin-top:-10px}
 .related-news li{padding:6px 0;border-bottom:1px dashed #d9d9d9}
+
+
+.input-text, .form-control,input[type="text"],input[type="password"],input[type="date"],input[type="datetime"],input[type="email"],input[type="number"],input[type="search"],input[type="tel"],input[type="time"],input[type="url"],textarea:not([dir="ltr"]),select,option,.chosen-container-single .chosen-single,.chosen-container-multi .chosen-choices{background-color:#fefefe;border:1px solid #ebebeb!important;outline:0!important;color:#7e8385;font-size:14px;margin:0;padding:4px 16px 7px 8px;height:38px;box-shadow:inset 0 0 2px rgba(0,0,0,0.03);-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;position: relative;width:100%}
+.input-box{margin-bottom:10px}
+textarea#comment{min-height:200px}

@@ -27,11 +27,11 @@ if ($subpage) {
 }
 
 echo '<div class="main-content">
-<div class="main">';
+<div class="main main-news"><div>';
 
-include 'left.php';
+//include 'left.php';
 
-echo '<div class="right-content"><div>';
+//echo '<div class="right-content"><div>';
 
 if ($mode) {
 	include $page.'/'.$mode.'.php';
@@ -41,8 +41,8 @@ else if ($subpage) {
 }
 else include $page.'/index.php';
 
-echo '</div></div>
-<div class="clearfix"></div>';
+//echo '</div></div>
+//<div class="clearfix"></div>';
 
-echo '</div>
+echo '</div></div>
 </div>';
