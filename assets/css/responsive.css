@@ -115,7 +115,10 @@
 	}
 	.header-content .logo a{
 		margin: auto;
-	}
+    }
+    .left-menu{
+        display: none
+    }
 	.mobile-menu{
 		display: block;
 		position: absolute;
