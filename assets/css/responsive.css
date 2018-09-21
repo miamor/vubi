@@ -119,6 +119,9 @@
     .left-menu{
         display: none
     }
+    .home-news-item{
+        width:100%
+    }
 	.mobile-menu{
 		display: block;
 		position: absolute;
@@ -264,7 +267,7 @@
 @media screen and (max-width: 600px) {
 	.left-content,.right-content{
 	    float: none;
-	    width: 100%;
+	    width: calc(100% - 50px);
 	}
 	.left-banner{
 		display: none;

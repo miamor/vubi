@@ -1459,3 +1459,5 @@ div.left-news a{
 .input-text, .form-control,input[type="text"],input[type="password"],input[type="date"],input[type="datetime"],input[type="email"],input[type="number"],input[type="search"],input[type="tel"],input[type="time"],input[type="url"],textarea:not([dir="ltr"]),select,option,.chosen-container-single .chosen-single,.chosen-container-multi .chosen-choices{background-color:#fefefe;border:1px solid #ebebeb!important;outline:0!important;color:#7e8385;font-size:14px;margin:0;padding:4px 16px 7px 8px;height:38px;box-shadow:inset 0 0 2px rgba(0,0,0,0.03);-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;position: relative;width:100%}
 .input-box{margin-bottom:10px}
 textarea#comment{min-height:200px}
+.home-list-news,.category-product,.right-content{position: relative}
+.right-content div{position: relative;width:calc(100%-50px)!important}
