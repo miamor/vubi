@@ -53,7 +53,7 @@
 		float: none;
 	}
 	.header-content .logo a{
-		*margin: auto;
+		margin: auto;
 	}
 	#main-menu {
 	    float: none;
