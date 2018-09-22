@@ -13,10 +13,10 @@
                     </a>
                 </h3>
                 <p>
-                <?php if ($tvN['highlight_content']) {
-                    echo substr(remove_bbcode($nO['highlight_content']), 0, 500);
+                <?php if ($nO['highlight_content']) {
+                    echo substr(remove_bbcode($nO['highlight_content']), 0, 300);
                 } else {
-                    echo substr(remove_bbcode($nO['content']), 0, 500);
+                    echo substr(remove_bbcode($nO['content']), 0, 300);
                 }?>... 
                 <a href="<?php echo $nO['link'] ?>" class="readmore-1">Xem thêm</a>
                 </p>

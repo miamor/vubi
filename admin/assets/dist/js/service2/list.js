@@ -25,7 +25,8 @@ $(document).ready(function () {
             {
                 data: "title",
                 render : function (data, type, row) {
-                    return '<a href="'+MAIN_URL+'/service2/'+row.id+'">'+data+'</a></div>'
+                    //return '<a href="'+MAIN_URL+'/service2/'+row.id+'">'+data+'</a></div>';
+                    return '<a href="'+MAIN_URL+'/tam-soat-di-truyen/'+row.id+'">'+data+'</a></div>';
                 }
             },
             {
@@ -37,7 +38,7 @@ $(document).ready(function () {
             {
                 data: "author",
                 render : function (data, type, row) {
-                    return '<a href="'+MAIN_URL+'/user/'+data.id+'">'+data.username+'</a></div>'
+                    return '<a href="'+MAIN_URL+'/user/'+data.id+'">'+data.username+'</a></div>';
                 }
             },
 			{ "data": "date"},
@@ -45,7 +46,7 @@ $(document).ready(function () {
             {
                 data: "service2_action",
                 render : function (data, type, row) {
-                    return '<div class="row-btns"><a attr-id="'+row.id+'" class="row-btn-edit" href="'+location.href+'/'+row.id+'"><i class="fa fa-pencil"></i></a> <a attr-id="'+row.id+'" class="row-btn-del text-danger" href="#" onclick="javascript:del(\''+row.id+'\'); return false"><i class="fa fa-trash"></i></a></div>'
+                    return '<div class="row-btns"><a attr-id="'+row.id+'" class="row-btn-edit" href="'+location.href+'/'+row.id+'"><i class="fa fa-pencil"></i></a> <a attr-id="'+row.id+'" class="row-btn-del text-danger" href="#" onclick="javascript:del(\''+row.id+'\'); return false"><i class="fa fa-trash"></i></a></div>';
                 }
             }
         ],

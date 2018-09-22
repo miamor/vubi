@@ -78,9 +78,11 @@ class News extends Config
             if ($row['is_service'] == 0) {
                 $row['link'] = MAIN_URL.'/news/'.$row['link'];
             } else if ($row['is_service'] == 1) {
-                $row['link'] = MAIN_URL.'/service1/'.$row['link'];
+                //$row['link'] = MAIN_URL.'/service1/'.$row['link'];
+                $row['link'] = MAIN_URL.'/xet-nghiem-ung-thu/'.$row['link'];
             } else if ($row['is_service'] == 2) {
-                $row['link'] = MAIN_URL.'/service2/'.$row['link'];
+                //$row['link'] = MAIN_URL.'/service2/'.$row['link'];
+                $row['link'] = MAIN_URL.'/tam-soat-di-truyen/'.$row['link'];
             }
             $this->all_list[] = $row;
         }
@@ -110,9 +112,11 @@ class News extends Config
             if ($row['is_service'] == 0) {
                 $row['link'] = MAIN_URL.'/news/'.$row['link'];
             } else if ($row['is_service'] == 1) {
-                $row['link'] = MAIN_URL.'/service1/'.$row['link'];
+                //$row['link'] = MAIN_URL.'/service1/'.$row['link'];
+                $row['link'] = MAIN_URL.'/xet-nghiem-ung-thu/'.$row['link'];
             } else if ($row['is_service'] == 2) {
-                $row['link'] = MAIN_URL.'/service2/'.$row['link'];
+                //$row['link'] = MAIN_URL.'/service2/'.$row['link'];
+                $row['link'] = MAIN_URL.'/tam-soat-di-truyen/'.$row['link'];
             }
             $list[] = $row;
         }
@@ -141,9 +145,11 @@ class News extends Config
             if ($row['is_service'] == 0) {
                 $this->link = $row['link'] = MAIN_URL.'/news/'.$row['link'];
             } else if ($row['is_service'] == 1) {
-                $this->link = $row['link'] = MAIN_URL.'/service1/'.$row['link'];
+                //$this->link = $row['link'] = MAIN_URL.'/service1/'.$row['link'];
+                $this->link = $row['link'] = MAIN_URL.'/xet-nghiem-ung-thu/'.$row['link'];
             } else if ($row['is_service'] == 2) {
-                $this->link = $row['link'] = MAIN_URL.'/service2/'.$row['link'];
+                //$this->link = $row['link'] = MAIN_URL.'/service2/'.$row['link'];
+                $this->link = $row['link'] = MAIN_URL.'/tam-soat-di-truyen/'.$row['link'];
             }
             $this->image = $row['image'];
             $this->content = $row['content'];
