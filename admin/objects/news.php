@@ -109,26 +109,28 @@ class News extends Config
 
     }
 
-    public function readMany($from, $to, $cond = '')
+    public function readMany($sid, $from, $to)
     {
         $query = "SELECT
 				    *
 				FROM
                     " . $this->table_name . "
-                $cond
+                WHERE 
+                    is_service = ?
                 ORDER BY id DESC
                 LIMIT $from, $to";
 
         $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $sid);
         $stmt->execute();
 
-        $this->all_list = array();
+        $list = array();
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             //    $row['username'] = '<a href="'.MAIN_URL.'/taxi/'.$row['username'].'"></a>';
-            $this->all_list[] = $row;
+            $list[] = $row;
         }
-        return $this->all_list;
+        return $list;
     }
 
     public function readAll()

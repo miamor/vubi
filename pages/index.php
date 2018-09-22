@@ -14,8 +14,9 @@ $feedback = new Feedback();
 $partners = new Partners();
 $service = new Services();
 
-$tuvanNewsHighlight = $news->readMany(0, 2);
-$tuvanNews = $news->readMany(2, 2);
+$tuvanNewsHighlight = $news->readMany(0, 0, 2);
+//$tuvanNews = $news->readMany(0, 2, 2);
+$topServicesList = $news->readMany(1, 0, 2);
 
 $doctorsList = $doctors->readAll();
 $feedbackList = $feedback->readAll();
@@ -104,11 +105,11 @@ $servicesList = $service->readAll(); ?>
                                     <h3><a href="<?php echo $tvN['link'] ?>"><?php echo $tvN['title'] ?></a></h3>
                                     <p>
                                         <?php if ($tvN['highlight_content']) {
-                                            echo substr(remove_bbcode($tvN['highlight_content']), 0, 300);
+                                            echo substr(remove_bbcode($tvN['highlight_content']), 0, 155);
                                         } else {
-                                            echo substr(remove_bbcode($tvN['content']), 0, 300);
+                                            echo substr(remove_bbcode($tvN['content']), 0, 155);
                                         } ?>
-                                    </p>
+                                    ...</p>
                                     <a href="<?php echo $tvN['link'] ?>" class="readmore-2">Xem thêm</a>
                                 </div>
                             </div>
@@ -123,7 +124,7 @@ $servicesList = $service->readAll(); ?>
                             <h3><span>Dịch vụ</span></h3>
                         </div>
                         <div class="tintuc-content">
-                        <?php foreach ($tuvanNews as $tvN) { ?>
+                        <?php foreach ($topServicesList as $tvN) { ?>
                             <div class="tintuc-content-item">
                                 <div>
                                     <div class="tintuc-content-item-left"><a href="<?php echo $tvN['link'] ?>"><img src="<?php echo $tvN['image'] ?>"></a></div>
