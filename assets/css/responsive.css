@@ -52,9 +52,6 @@
 	.header-content .logo{
 		float: none;
 	}
-	.header-content .logo a{
-		margin: auto;
-	}
 	#main-menu {
 	    float: none;
 	    padding-left: 0;
@@ -94,6 +91,12 @@
 		padding-right: 20px;
 	}
 }
+
+@media screen and (min-width: 900px) and (max-width: 1170px) {
+.header-content .logo a{
+    margin: auto;
+}
+
 @media screen and (max-width: 900px) {
 	.home-product .main > div,
 	.main-footer .main > div,
