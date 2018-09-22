@@ -94,7 +94,7 @@ $servicesList = $service->readAll(); ?>
                 <div class="tuvan">
                     <div>
                         <div class="module-title-2">
-                            <h3><span>Dịch vụ</span></h3>
+                            <h3><span>Tin tức</span></h3>
                         </div>
                         <div class="tuvan-content">
                         <?php foreach ($tuvanNewsHighlight as $tvN) { ?>
@@ -120,7 +120,7 @@ $servicesList = $service->readAll(); ?>
                 <div class="tintuc">
                     <div>
                         <div class="module-title-2">
-                            <h3><span>Tin tức</span></h3>
+                            <h3><span>Dịch vụ</span></h3>
                         </div>
                         <div class="tintuc-content">
                         <?php foreach ($tuvanNews as $tvN) { ?>
@@ -154,7 +154,7 @@ $servicesList = $service->readAll(); ?>
             <div>
                 <div class="home-row5-left">
                     <div>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-VhkseVujEQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0W_YF7ux8-8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="home-row5-right">

@@ -16,7 +16,7 @@
                 <?php if ($tvN['highlight_content']) {
                     echo substr(remove_bbcode($nO['highlight_content']), 0, 500);
                 } else {
-                    echo substr(remove_bbcode($nO['content']), 0, 500);
+                    echo substr(remove_bbcode($nO['sapo']), 0, 500);
                 }?>... 
                 <a href="<?php echo $nO['link'] ?>" class="readmore-1">Xem thêm</a>
                 </p>
