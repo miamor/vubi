@@ -28,6 +28,15 @@ class News extends Config
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             //    $row['username'] = '<a href="'.MAIN_URL.'/taxi/'.$row['username'].'"></a>';
+            if ($row['is_service'] == 0) {
+                $row['link'] = MAIN_URL.'/news/'.$row['link'];
+            } else if ($row['is_service'] == 1) {
+                //$row['link'] = MAIN_URL.'/service1/'.$row['link'];
+                $row['link'] = MAIN_URL.'/xet-nghiem-ung-thu/'.$row['link'];
+            } else if ($row['is_service'] == 2) {
+                //$row['link'] = MAIN_URL.'/service2/'.$row['link'];
+                $row['link'] = MAIN_URL.'/tam-soat-di-truyen/'.$row['link'];
+            }
             $list[] = $row;
         }
         return $list;
