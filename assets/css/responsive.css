@@ -99,6 +99,10 @@
 }
 
 @media screen and (max-width: 900px) {
+    .head-top-left > ul > li:not(.lang) {
+        display:none
+    }
+
 	.home-product .main > div,
 	.main-footer .main > div,
 	.duantieubieu-content{
@@ -350,7 +354,7 @@
 		display: none;
 	}
 	.head-top-left ul li:last-child{
-		margin: 23px 0 -23px;
+		margin: 68px 0 -68px;
 		padding: 0;
 	}
 	.head-top-right{
