@@ -93,8 +93,9 @@
 }
 
 @media screen and (min-width: 900px) and (max-width: 1170px) {
-.header-content .logo a{
-    margin: auto;
+    .header-content .logo a{
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 900px) {
