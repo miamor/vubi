@@ -1,3 +1,8 @@
+<?php 
+include 'objects/consult.php';
+$consult = new Consult();
+$nhombenh = $consult->getNhomBenh(); ?>
+
 <div class="main-content">
         <div class="main">
             <div>
@@ -31,15 +36,10 @@
                                             <tr>
                                                 <td style="width: 35%;">Chọn nhóm bệnh:</td>
                                                 <td>
-                                                    <select id="nhombenh">
-                                                        <option value="3">Viêm gan virus</option>
-                                                        <option value="4">Sản - phụ khoa</option>
-                                                        <option value="5">Tiêu hóa - gan mật</option>
-                                                        <option value="6">Ung thư</option>
-                                                        <option value="7">Nhi khoa</option>
-                                                        <option value="9">Cơ xương khớp</option>
-                                                        <option value="10">Truyền nhiễm</option>
-                                                        
+                                                    <select name="nhombenh" id="nhombenh">
+                                                    <?php foreach ($nhombenh as $bO) {
+                                                        echo '<option value="'.$bO['id'].'">'.$bO['title'].'</option>';
+                                                    } ?>
                                                     </select>
                                                 </td>
                                             </tr>
@@ -49,7 +49,7 @@
                                             <tr>
                                                 <td>Họ tên : <font color="red">(*)</font></td>
                                                 <td>
-                                                    <input name="" id="" type="text">
+                                                    <input name="name" id="" type="text">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -58,11 +58,19 @@
                                             <tr>
                                                 <td>Địa chỉ :</td>
                                                 <td>
-                                                    <input name="" id="" type="text">
+                                                    <input name="address" id="" type="text">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td style="height: 10px;">
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Mã bảo mật : <font color="red">(*)</font></td>
+                                                <td>
+                                                    <input name="code" id="" style="width:50px;" type="text">
+                                                    <img id="ctl00_ContentPlaceHolder1_Image1" src="https://medlatec.vn/JpgeCaptcha.aspx" style="height:30px;width:80px;border-width:0px;margin:11px 0 -11px">
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -72,7 +80,7 @@
                                             <tr>
                                                 <td style="width: 20%;">Điện thoại:</td>
                                                 <td>
-                                                    <input name="" id="" style="width:90%;" type="text"> 
+                                                    <input name="phone" id="" style="width:90%;" type="text"> 
                                                 </td>
                                             </tr>
                                             <tr>
@@ -82,7 +90,7 @@
                                             <tr>
                                                 <td>Tuổi:</td>
                                                 <td>
-                                                    <input name="" id="" style="width:90%;" type="text">
+                                                    <input name="age" id="" style="width:90%;" type="text">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -90,37 +98,37 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Email :<font color="red">(*)</font></td>
+                                                <td>Email : <font color="red">(*)</font></td>
                                                 <td>
-                                                    <input name="" id="" style="width:90%;" type="text">
+                                                    <input name="email" id="" style="width:90%;" type="text">
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                                <div style="clear: both;">
-                                    <table>
+                                <!--<div style="clear: both;">
+                                    <table class="table3" style="width:100%">
                                         <tbody>
                                             <tr>
-                                                <td>Mã bảo mật :<font color="red">(*)</font></td>
+                                                <td style="width: 17%">Mã bảo mật : <font color="red">(*)</font></td>
                                                 <td>
-                                                    <input name="" id="" style="width:50px;" type="text">
+                                                    <input name="code" id="" style="width:50px;" type="text">
                                                     <img id="ctl00_ContentPlaceHolder1_Image1" src="https://medlatec.vn/JpgeCaptcha.aspx" style="height:30px;width:80px;border-width:0px;">
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
-                                <div style="padding-top: 20px;">
+                                </div> -->
+                                <div class="clearfix" style="padding-top: 20px;">
                                     (Quý vị vui lòng gõ Tiếng Việt có dấu và cung cấp đầy đủ thông tin tuổi, nghề nghiệp, tiền sử, triệu chứng bệnh và các kết quả xét nghiệm, chẩn đoán của bác sỹ (nếu có) để được tư vấn tốt nhất) 
                                 </div>
                                 <div>
                                     <table style="width: 100%;" class="table3">
                                         <tbody>
                                             <tr>
-                                                <td style="width: 17%">Tiêu đề :<font color="red">(*)</font></td>
+                                                <td style="width: 17%">Tiêu đề : <font color="red">(*)</font></td>
                                                 <td>
-                                                    <input name="" id="" type="text">
+                                                    <input name="title" id="" type="text">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -128,10 +136,14 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Nội dung tư vấn :<font color="red">(*)</font></td>
+                                                <td>Nội dung tư vấn : <font color="red">(*)</font></td>
                                                 <td>
-                                                    <textarea name=""></textarea>
+                                                    <textarea style="min-height:200px" name="content"></textarea>
                                                 </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
                                             </tr>
                                         </tbody>
                                     </table>

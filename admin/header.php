@@ -154,6 +154,12 @@ $config->addJS('dist', 'main.js');?>
   </a>
 </li>
 
+<li class="treeview">
+  <a href="<?php echo MAIN_URL ?>/consult">
+    <i class="fa fa-star"></i> <span>Câu hỏi tư vấn</span>
+  </a>
+</li>
+
           </ul>
         </section>
         <!-- /.sidebar -->
