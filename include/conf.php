@@ -2,9 +2,9 @@
 session_start();
 error_reporting(E_ERROR | E_PARSE);
 
-define('__HOST__', 'localhost');
+define('__HOST__', 'vubi.vn');
 define('DB_NAME', 'vubi');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'mta@ppa123');
 define('DB_USERNAME', 'root');
 define('DB_HOST', 'localhost');
 
