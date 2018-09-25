@@ -9,7 +9,7 @@ $(document).ready(function () {
                 mtip('', 'success', '', 'Cập nhật thành công!');
                 location.href = MAIN_URL+'/menu';
             }
-        })
-        return false
+        });
+        return false;
     });
 })

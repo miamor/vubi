@@ -1,7 +1,11 @@
 <?php 
+$config->addJS('', 'tuvan.js');
 include 'objects/consult.php';
 $consult = new Consult();
-$nhombenh = $consult->getNhomBenh(); ?>
+$nhombenh = $consult->getNhomBenh();
+
+include("include/simple-php-captcha/simple-php-captcha.php");
+$_SESSION['captcha'] = simple_php_captcha(); ?>
 
 <div class="main-content">
         <div class="main">
@@ -69,8 +73,8 @@ $nhombenh = $consult->getNhomBenh(); ?>
                                             <tr>
                                                 <td>Mã bảo mật : <font color="red">(*)</font></td>
                                                 <td>
-                                                    <input name="code" id="" style="width:50px;" type="text">
-                                                    <img id="ctl00_ContentPlaceHolder1_Image1" src="https://medlatec.vn/JpgeCaptcha.aspx" style="height:30px;width:80px;border-width:0px;margin:11px 0 -11px">
+                                                    <input name="code" id="" style="width:100px;" type="text">
+                                                    <img class="captcha" src="<?php echo $_SESSION['captcha']['image_src'] ?>" style="height:38px;width:80px;border-width:0px;margin:0 0 -14px 5px">
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -106,7 +110,7 @@ $nhombenh = $consult->getNhomBenh(); ?>
                                         </tbody>
                                     </table>
                                 </div>
-                                <!--<div style="clear: both;">
+                                <!-- <div style="clear: both;">
                                     <table class="table3" style="width:100%">
                                         <tbody>
                                             <tr>

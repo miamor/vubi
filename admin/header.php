@@ -160,6 +160,12 @@ $config->addJS('dist', 'main.js');?>
   </a>
 </li>
 
+<li class="treeview">
+  <a href="<?php echo MAIN_URL ?>/contact">
+    <i class="fa fa-star"></i> <span>Liên hệ</span>
+  </a>
+</li>
+
           </ul>
         </section>
         <!-- /.sidebar -->

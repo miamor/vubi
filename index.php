@@ -19,16 +19,20 @@ $menuTop = $menu->readAll('top');
 if ($page == 'xet-nghiem-ung-thu') $page = 'service1';
 else if ($page == 'tam-soat-di-truyen') $page = 'service2';
 
-if ($page != 'index' && !file_exists('pages/' . $page . '.php')) {
-    $page = 'error';
-}
-
-if (!$do && !$v && !$temp) {
+if (!$do && !$v && !$temp && $page != 'requests') {
     include 'header.php';
 }
 
-if ($page) {
+
+if ($page && $page != 'requests') {
+    if ($page != 'index' && !file_exists('pages/' . $page . '.php')) {
+        $page = 'error';
+    }
+    
     include 'pages/' . $page . '.php';
+}
+if ($page == 'requests') {
+    include 'requests/' . $__pageAr[1] . '/' . $__pageAr[2];
 }
 
 if (!$do && !$v && !$temp && $page != 'requests') {

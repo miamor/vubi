@@ -1,3 +1,11 @@
+<?php
+$config->addJS('', 'contact.js');
+include 'objects/contact.php';
+$contact = new Contact();
+
+include("include/simple-php-captcha/simple-php-captcha.php");
+$_SESSION['captcha'] = simple_php_captcha(); ?>
+
 <div class="main-content">
     <div class="main">
         <div>
@@ -56,11 +64,13 @@
                                                 </div>
                                                 <div class="input-box">
                                                     <input class="input-text" placeholder="Mã xác nhận" name="captcha" id="captcha" type="text" style="float: left; width:40%;" required="">
-                                                    <img class="captcha" style="margin-top:8px;margin-left:5px;"/>
+                                                    <img class="captcha" style="height:38px;width:80px;border-width:0px;margin:0 0 0 5px" src="<?php echo $_SESSION['captcha']['image_src'] ?>">
                                                     <script>
-                                                        $(".captcha").attr("src", "http://medzavy.com/captcha.png?background=WzI1NSwyNTUsMjU1XQ==&rand=" + Math.random());
                                                         $(".captcha").click(function() {
-                                                            $(".captcha").attr("src", "http://medzavy.com/captcha.png?background=WzI1NSwyNTUsMjU1XQ==&rand=" + Math.random());
+                                                            $.get(MAIN_URL+'/requests/captcha/gen.php', function (data) {
+                                                                src = data.image_src;
+                                                                $(".captcha").attr("src", src);
+                                                            }
                                                         });
                                                     </script>
                                                 </div>
