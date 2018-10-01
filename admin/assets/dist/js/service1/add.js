@@ -1,4 +1,6 @@
 $(document).ready(function () {
+	window.tagBox && window.tagBox.init();
+
     $('.theform').submit(function () {
         $.post(MAIN_URL+'/requests/service1/add.php', $(this).serialize(), function (data) {
             console.log(data);

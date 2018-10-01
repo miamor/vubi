@@ -14,6 +14,8 @@ $news->content = isset($_POST['content']) ? $_POST['content'] : null;
 $news->price = isset($_POST['price']) ? $_POST['price'] : 0;
 $news->is_service = 2;
 
+$news->tags = isset($_POST['tax_input']) ? implode(',', $_POST['tax_input']) : null;
+
 //echo json_encode($_POST, JSON_UNESCAPED_UNICODE);
 
 if ($news->id && $news->title && $news->author && $news->date && $news->content) {

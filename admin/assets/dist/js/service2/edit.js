@@ -1,6 +1,8 @@
 $(document).ready(function () {
     //$('#reservation').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
 
+	window.tagBox && window.tagBox.init();
+
     $('.theform').submit(function () {
         $.post(MAIN_URL+'/requests/service2/edit.php', $(this).serialize(), function (data) {
             console.log(data);

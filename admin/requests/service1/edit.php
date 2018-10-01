@@ -14,6 +14,8 @@ $news->highlight_content = isset($_POST['highlight_content']) ? $_POST['highligh
 $news->price = isset($_POST['price']) ? $_POST['price'] : 0;
 $news->is_service = 1;
 
+$news->tags = isset($_POST['tax_input']) ? implode(',', $_POST['tax_input']) : null;
+
 //echo json_encode($_POST, JSON_UNESCAPED_UNICODE);
 
 if ($news->id && $news->title && $news->author && $news->date && $news->content) {
