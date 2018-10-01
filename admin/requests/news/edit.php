@@ -13,6 +13,7 @@ $news->content = isset($_POST['content']) ? $_POST['content'] : null;
 $news->highlight_content = isset($_POST['highlight_content']) ? $_POST['highlight_content'] : null;
 $news->price = 0;
 $news->is_service = 0;
+$news->tags = isset($_POST['tax_input']) ? implode(',', $_POST['tax_input']) : null;
 
 //echo json_encode($_POST, JSON_UNESCAPED_UNICODE);
 

@@ -1,12 +1,14 @@
 $(document).ready(function () {
     //$('#reservation').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
 
+    window.tagBox && window.tagBox.init();
+
     $('.theform').submit(function () {
         $.post(MAIN_URL+'/requests/news/edit.php', $(this).serialize(), function (data) {
-            console.log(data);
+            //console.log(data);
             if (data == 1) location.href = MAIN_URL+'/news';
         })
-        return false
+        return false;
     });
 
     $('#delete_news').click(function () {
@@ -14,6 +16,6 @@ $(document).ready(function () {
             console.log(data);
             if (data == 1) location.href = MAIN_URL+'/news';
         })
-        return false
+        return false;
     })
 })

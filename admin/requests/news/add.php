@@ -13,7 +13,10 @@ $news->highlight_content = isset($_POST['highlight_content']) ? $_POST['highligh
 $news->price = 0;
 $news->is_service = 0;
 
-//echo json_encode($_POST, JSON_UNESCAPED_UNICODE);
+//$news->tax_input = isset($_POST['tax_input']) ? $_POST['tax_input'] : null;
+$news->tags = isset($_POST['tax_input']) ? implode(',', $_POST['tax_input']) : null;
+
+//echo json_encode($news->tags, JSON_UNESCAPED_UNICODE);
 
 if ($news->title && $news->author && $news->date && $news->content) {
 	$add = $news->create();

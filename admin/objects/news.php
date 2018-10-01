@@ -15,7 +15,7 @@ class News extends Config
         $query = "INSERT INTO
 					" . $this->table_name . "
 				SET
-					title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?, is_service = ?, highlight_content = ?";
+					title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?, is_service = ?, highlight_content = ?, tags = ?";
 
         $stmt = $this->conn->prepare($query);
 
@@ -28,6 +28,7 @@ class News extends Config
         $this->date = htmlspecialchars(strip_tags($this->date));
         $this->price = htmlspecialchars(strip_tags($this->price));
         $this->is_service = htmlspecialchars(strip_tags($this->is_service));
+        $this->tags = htmlspecialchars(strip_tags($this->tags));
         //$this->date = date("Y-m-d h:i:s a", time());
 
         // bind parameters
@@ -40,6 +41,7 @@ class News extends Config
         $stmt->bindParam(7, $this->price);
         $stmt->bindParam(8, $this->is_service);
         $stmt->bindParam(9, $this->highlight_content);
+        $stmt->bindParam(10, $this->tags);
 
         // execute the query
         if ($stmt->execute()) {
@@ -55,7 +57,7 @@ class News extends Config
         $query = "UPDATE
 					" . $this->table_name . "
 				SET
-                    title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?, highlight_content = ?
+                    title = ?, link = ?, image = ?, content = ?, author = ?, date = ?, price = ?, highlight_content = ?, tags = ?
 				WHERE
 					id = ?";
 
@@ -69,6 +71,7 @@ class News extends Config
         $this->author = htmlspecialchars(strip_tags($this->author));
         $this->date = htmlspecialchars(strip_tags($this->date));
         $this->price = htmlspecialchars(strip_tags($this->price));
+        $this->tags = htmlspecialchars(strip_tags($this->tags));
         //$this->date = date("Y-m-d h:i:s a", time());
 
         // bind parameters
@@ -80,7 +83,8 @@ class News extends Config
         $stmt->bindParam(6, $this->date);
         $stmt->bindParam(7, $this->price);
         $stmt->bindParam(8, $this->highlight_content);
-        $stmt->bindParam(9, $this->id);
+        $stmt->bindParam(9, $this->tags);
+        $stmt->bindParam(10, $this->id);
         
 
         // execute the query
@@ -205,6 +209,7 @@ class News extends Config
             $this->author = $this->getUserInfo($row['author']);
             $this->date = $row['date'];
             $this->price = $row['price'];
+            $this->tags = $row['tags'];
         }
 
         return ($row['id'] ? $row : null);

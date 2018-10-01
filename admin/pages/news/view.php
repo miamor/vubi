@@ -5,6 +5,7 @@ $user->readAllSimple();
 //$config->addJS('plugins', 'daterangepicker/daterangepicker.js');
 
 //$config->addJS('plugins', "sceditor/minified/jquery.sceditor.bbcode.min.js");
+$config->addJS('dist', "tags-box.js");
 $config->addJS('dist', "{$page}/edit.js");
 ?>
 
@@ -23,7 +24,7 @@ $config->addJS('dist', "{$page}/edit.js");
 <!-- section.content Main content -->
 <section class="content">
 
-<form class="theform">
+<form id="post" class="theform">
     <div class="form-group">
         <div class="col-lg-3 control-label">
             Tiêu đề
@@ -96,6 +97,34 @@ $config->addJS('dist', "{$page}/edit.js");
         </div>
         <div class="clearfix"></div>
     </div>
+
+    <div class="form-group">
+        <div class="col-lg-3 control-label">
+            Tags
+        </div>
+        <div class="col-lg-9 postbox" id="tagsdiv-post_tag">
+            <div class="tagsdiv" id="post_tag">
+                <div class="jaxtag">
+                    <textarea class="hidden the-tags" name="tax_input[post_tag]" rows="3" cols="20" id="tax-input-post_tag"  aria-describedby="new-tag-post_tag-desc"><?php echo $news->tags ?></textarea>
+                    <div class="ajaxtag hide-if-no-js">
+                        <div class="col-lg-4 no-padding">
+                            <input data-wp-taxonomy="post_tag" type="text" id="new-tag-post_tag" name="newtag[post_tag]" class="newtag form-input-tip form-control" size="16" autocomplete="off" aria-describedby="new-tag-post_tag-desc" value=""/>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="button" class="button tagadd" value="Add" />
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <p class="howto" id="new-tag-post_tag-desc">Separate tags with commas</p>
+
+                    <p class="hide-if-no-js"><button type="button" class="button-link tagcloud-link" id="link-post_tag" aria-expanded="false">Choose from the most used tags</button></p>
+                </div>
+                <div class="tagchecklist"></div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
 
     <div class="add-form-submit center">
         <input class="btn btn-default" type="reset" value="Nhập lại"/>
