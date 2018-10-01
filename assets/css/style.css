@@ -1461,3 +1461,24 @@ div.left-news a{
 textarea#comment{min-height:200px}
 .home-list-news,.category-product,.right-content{position: relative}
 .right-content div{position: relative;width:calc(100%-50px)!important}
+
+.post-tags a,.post-tags span {
+    display:inline-block;
+    color:#999
+}
+
+.post-tags a {
+    background:#f2f2f2;
+    line-height:1.666em;
+    white-space:nowrap;
+    font-size:.75em;
+    padding:3px 7px;
+    margin:0 5px 2px 0;
+    -webkit-border-radius:2px;
+    border-radius:2px
+   }
+.post-tags a:hover {
+    background-color:#338d5c;
+    color:#fff
+}
+   
