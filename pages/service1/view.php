@@ -9,6 +9,13 @@
 
     <div class="news-content"></div>
 
+    <p class="post-tags">
+        <span>Tags:</span> 
+        <?php foreach ($news->tags as $tag) {
+            echo '<a href="#" rel="'.$tag.'">'.$tag.'</a>';
+        } ?>
+    </p>
+
     <textarea class="hidden" id="news-content-textarea"><?php echo $news->content ?></textarea>
     <textarea class="hidden" id="news-highlight_content-textarea"><?php echo $news->highlight_content ?></textarea>
 </div>

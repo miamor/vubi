@@ -168,7 +168,7 @@ class News extends Config
             $this->date = $row['date'];
             $this->is_service = $row['is_service'];
             $this->price = $row['price'];
-            $this->tags = $row['tags'];
+            $this->tags = explode(',', $row['tags']);
         }
 
         return ($row['id'] ? $row : null);

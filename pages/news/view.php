@@ -12,7 +12,7 @@
     <p class="post-tags">
         <span>Tags:</span> 
         <?php foreach ($news->tags as $tag) {
-            echo '<a href="#" rel="'.$tag.'">'.$tag.'</div>';
+            echo '<a href="#" rel="'.$tag.'">'.$tag.'</a>';
         } ?>
     </p>
 
