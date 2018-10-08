@@ -4,7 +4,9 @@ include 'objects/progress.php';
 
 $news = new Progress();
 
-$data = array('data' => $news->readAll());
+$type = isset($_GET['type']) ? $_GET['type'] : 1;
+
+$data = array('data' => $news->readAll($type));
 
 echo json_encode($data, JSON_UNESCAPED_UNICODE);
 

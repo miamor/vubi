@@ -14,19 +14,19 @@ class Progress extends Config
         $query = "SELECT
 				    *
 				FROM
-					" . $this->table_name . "
+                    " . $this->table_name . "
                 ORDER BY orders ASC, id DESC";
 
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
 
-        $this->all_list = array();
+        $list = array();
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             //    $row['username'] = '<a href="'.MAIN_URL.'/taxi/'.$row['username'].'"></a>';
-            $this->all_list[] = $row;
+            $list[$row['pid']][] = $row;
         }
-        return $this->all_list;
+        return $list;
     }
 
 }

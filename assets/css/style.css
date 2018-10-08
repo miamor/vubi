@@ -1187,10 +1187,10 @@ h3.title-footer{
     height: 20px;
     padding-right: 10px;
 }
-.danhsach-cauhoi > ul li.active{
+.danhsach-cauhoi:not(.quytrinh) > ul li.active{
     background: #f7f7f7;
 }
-.danhsach-cauhoi-content{
+.danhsach-cauhoi:not(.quytrinh) .danhsach-cauhoi-content{
     background: #f7f7f7;
     border: 1px solid #ccc;
     border-top: none;
@@ -1982,7 +1982,7 @@ textarea#comment{min-height:200px}
 .carousel--mobileview .carousel-indicators li {
     text-indent: 0;
     position: relative;
-    font-size: 1.143em;
+    /*font-size: 1.1em;*/
 }
 
 .carousel--mobileview .carousel-indicators li:before {
@@ -2020,7 +2020,8 @@ textarea#comment{min-height:200px}
 .carousel--mobileview .carousel-indicators li h4 {
     font-weight: 700;
     margin-top: 5px;
-    margin-bottom:5px
+    margin-bottom:5px;
+    font-size: 1.13em;
 }
 
 .carousel--mobileview .carousel-indicators li.active h4,

@@ -8,6 +8,7 @@ if ($subpage) {
 }
 
 if ($mode) {
+    $type = isset($_GET['type']) ? $_GET['type'] : 1;
 	include $page.'/'.$mode.'.php';
 }
 else if ($subpage) {

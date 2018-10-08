@@ -58,6 +58,19 @@ $config->addJS('dist', "{$page}/edit.js");
         <div class="clearfix"></div>
     </div>
 
+    <div class="form-group">
+        <div class="col-lg-3 control-label">
+            Tab 
+        </div>
+        <div class="col-lg-9">
+            <select class="form-control" name="pid">
+                <option <?php if ($progress->pid == 1) echo 'selected' ?> value="1">Quy trình 1</option>
+                <option <?php if ($progress->pid == 2) echo 'selected' ?> value="2">Quy trình 2</option>
+            </select>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
     <div class="add-form-submit center">
         <input class="btn btn-default" type="reset" value="Nhập lại"/>
         <input class="btn btn-success" type="submit" value="Hoàn tất"/>

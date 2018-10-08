@@ -9,6 +9,7 @@ $progress->title = isset($_POST['title']) ? $_POST['title'] : null;
 $progress->image = isset($_POST['image']) ? $_POST['image'] : null;
 $progress->content = isset($_POST['content']) ? $_POST['content'] : null;
 $progress->orders = isset($_POST['orders']) ? $_POST['orders'] : 1;
+$progress->pid = isset($_POST['pid']) ? $_POST['pid'] : 1;
 
 //echo json_encode($_POST, JSON_UNESCAPED_UNICODE);
 

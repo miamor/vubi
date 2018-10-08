@@ -27,16 +27,27 @@ $progList = $progressObj->readAll(); ?>
 
                 <div class="content">
 
-                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                    <div class="danhsach-cauhoi quytrinh">
+                        <ul>
+                            <li class="active"><a href="#tab1" class="cauhoi-tab-head">Quy trình 1</a></li>
+                            <li><a href="#tab2" class="cauhoi-tab-head">Quy trình 2</a></li>
+                        </ul>
+                        <div class="danhsach-cauhoi-content">
 
-                        <div style="margin-top:20px" class="carousel carousel--mobileview carousel-fade slide clearfix" data-ride="carousel" id="carousel--mobileview--how-it-works-grabtaxi">
+<?php foreach ($progList as $_i => $prL) {
+    $active = '';
+    if ($_i == 1) $active = ' active'; ?>
+                        <div class="cauhoi-tab<?php echo $active ?>" id="tab<?php echo $_i ?>">
+                            <div>
+
+                        <div class="carousel carousel--mobileview carousel-fade slide clearfix" data-ride="carousel" id="carousel--mobileview--progress-<?php echo $_i ?>">
                             <!-- Indicators -->
                             <ol class="carousel-indicators steps--4 clearfix">
-                            <?php foreach ($progList as $pK => $pO) {
+                            <?php foreach ($prL as $pK => $pO) {
                                 if ($pK == 0) $active = ' class="active"';
                                 else $active = '';
                                 $pKn = $pK+1;
-                                echo '<li'.$active.' data-slide-to="'.$pK.'" data-target="#carousel--mobileview--how-it-works-grabtaxi"
+                                echo '<li'.$active.' data-slide-to="'.$pK.'" data-target="#carousel--mobileview--progress-'.$_i.'"
                                 data-step="'.$pKn.'">
                                 <h4>'.$pO['title'].'</h4>
                                 <p>'.$pO['content'].'</p>
@@ -45,7 +56,7 @@ $progList = $progressObj->readAll(); ?>
                             </ol><!-- Wrapper for slides -->
                             <div class="carousel-description visible-xs"></div>
                             <div class="carousel-inner">
-                            <?php foreach ($progList as $pK => $pO) {
+                            <?php foreach ($prL as $pK => $pO) {
                                 if ($pK == 0) $active = ' active';
                                 else $active = '';
                                 echo '<div class="item'.$active.'">
@@ -56,6 +67,11 @@ $progList = $progressObj->readAll(); ?>
                             <div class="carousel-bg"></div>
                         </div><!-- /carousel -->
 
+                            </div>
+                        </div>
+<?php } ?>
+
+                        </div>
                     </div>
                 </div>
             </div>

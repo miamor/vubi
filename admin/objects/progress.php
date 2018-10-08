@@ -15,7 +15,7 @@ class Progress extends Config
         $query = "INSERT INTO
 					" . $this->table_name . "
 				SET
-					title = ?, image = ?, content = ?, orders = ?";
+					title = ?, image = ?, content = ?, orders = ?, pid = ?";
 
         $stmt = $this->conn->prepare($query);
 
@@ -23,12 +23,14 @@ class Progress extends Config
         $this->title = htmlspecialchars(strip_tags($this->title));
         $this->image = htmlspecialchars(strip_tags($this->image));
         $this->content = htmlspecialchars(strip_tags($this->content));
+        $this->pid = htmlspecialchars(strip_tags($this->pid));
 
         // bind parameters
         $stmt->bindParam(1, $this->title);
         $stmt->bindParam(2, $this->image);
         $stmt->bindParam(3, $this->content);
         $stmt->bindParam(4, $this->orders);
+        $stmt->bindParam(5, $this->pid);
 
         // execute the query
         if ($stmt->execute()) {
@@ -44,7 +46,7 @@ class Progress extends Config
         $query = "UPDATE
 					" . $this->table_name . "
 				SET
-                    title = ?, image = ?, content = ?, orders = ?
+                    title = ?, image = ?, content = ?, orders = ?, pid = ?
 				WHERE
 					id = ?";
 
@@ -55,13 +57,15 @@ class Progress extends Config
         $this->image = htmlspecialchars(strip_tags($this->image));
         $this->content = htmlspecialchars(strip_tags($this->content));
         $this->orders = htmlspecialchars(strip_tags($this->orders));
+        $this->pid = htmlspecialchars(strip_tags($this->pid));
 
         // bind parameters
-        $stmt->bindParam(1, $this->cust_name);
+        $stmt->bindParam(1, $this->title);
         $stmt->bindParam(2, $this->image);
         $stmt->bindParam(3, $this->content);
         $stmt->bindParam(4, $this->orders);
-        $stmt->bindParam(5, $this->id);
+        $stmt->bindParam(5, $this->pid);
+        $stmt->bindParam(6, $this->id);
 
         // execute the query
         if ($stmt->execute()) {
@@ -89,12 +93,13 @@ class Progress extends Config
 
     }
 
-    public function readAll()
+    public function readAll($pid)
     {
         $query = "SELECT
 				    *
 				FROM
-					" . $this->table_name . "
+                    " . $this->table_name . "
+                WHERE pid = ".$pid."
                 ORDER BY orders ASC, id DESC";
 
         $stmt = $this->conn->prepare($query);
