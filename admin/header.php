@@ -149,6 +149,12 @@ $config->addJS('dist', 'main.js');?>
 </li>
 
 <li class="treeview">
+  <a href="<?php echo MAIN_URL ?>/progress">
+    <i class="fa fa-star"></i> <span>Quy trình</span>
+  </a>
+</li>
+
+<li class="treeview">
   <a href="<?php echo MAIN_URL ?>/partners">
     <i class="fa fa-star"></i> <span>Đối tác</span>
   </a>
