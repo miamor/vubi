@@ -1,16 +1,16 @@
 <?php
-$config->addJS('dist', "{$page}/edit.js");
+$config->addJS('dist', "{$page}/add.js");
 ?>
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Sửa phản hồi
+    Thêm bước
   </h1>
   <ol class="breadcrumb">
     <li><a href="<?php echo MAIN_URL ?>"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li><a href="<?php echo MAIN_URL ?>/feedback">Phản hồi</a></li>
-    <li class="active">Sửa</li>
+    <li><a href="<?php echo MAIN_URL ?>/progress">Quy trình</a></li>
+    <li class="active">Thêm bước</li>
   </ol>
 </section>
 
@@ -20,11 +20,10 @@ $config->addJS('dist', "{$page}/edit.js");
 <form class="theform">
     <div class="form-group">
         <div class="col-lg-3 control-label">
-            Tên khách hàng
+            Tiêu đề
         </div>
         <div class="col-lg-9">
-            <input type="hidden" name="id" value="<?php echo $news->id ?>"/>
-            <input type="text" class="form-control" name="cust_name" value="<?php echo $news->cust_name ?>"/>
+            <input type="text" class="form-control" name="title"/>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -33,7 +32,7 @@ $config->addJS('dist', "{$page}/edit.js");
             Ảnh
         </div>
         <div class="col-lg-9">
-            <input type="text" class="form-control" name="image" value="<?php echo $news->image ?>"/>
+            <input type="text" class="form-control" name="image"/>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -43,7 +42,17 @@ $config->addJS('dist', "{$page}/edit.js");
             Nội dung
         </div>
         <div class="col-lg-9">
-            <textarea name="content" class="form-control"><?php echo $news->content ?></textarea>
+            <textarea name="content" class="form-control"></textarea>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-lg-3 control-label">
+            Thứ tự
+        </div>
+        <div class="col-lg-9">
+            <input type="number" class="form-control" name="orders"/>
         </div>
         <div class="clearfix"></div>
     </div>

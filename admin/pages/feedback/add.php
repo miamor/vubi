@@ -1,5 +1,5 @@
 <?php
-$config->addJS('dist', "{$page}/edit.js");
+$config->addJS('dist', "{$page}/add.js");
 ?>
 
 <!-- Content Header (Page header) -->
@@ -23,8 +23,7 @@ $config->addJS('dist', "{$page}/edit.js");
             Tên khách hàng
         </div>
         <div class="col-lg-9">
-            <input type="hidden" name="id" value="<?php echo $news->id ?>"/>
-            <input type="text" class="form-control" name="cust_name" value="<?php echo $news->cust_name ?>"/>
+            <input type="text" class="form-control" name="cust_name"/>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -33,7 +32,7 @@ $config->addJS('dist', "{$page}/edit.js");
             Ảnh
         </div>
         <div class="col-lg-9">
-            <input type="text" class="form-control" name="image" value="<?php echo $news->image ?>"/>
+            <input type="text" class="form-control" name="image"/>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -43,7 +42,7 @@ $config->addJS('dist', "{$page}/edit.js");
             Nội dung
         </div>
         <div class="col-lg-9">
-            <textarea name="content" class="form-control"><?php echo $news->content ?></textarea>
+            <textarea name="content" class="form-control"></textarea>
         </div>
         <div class="clearfix"></div>
     </div>

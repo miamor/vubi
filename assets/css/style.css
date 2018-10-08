@@ -1976,6 +1976,7 @@ textarea#comment{min-height:200px}
     text-align: left;
     background: none;
     border: none;
+    margin:0
 }
 
 .carousel--mobileview .carousel-indicators li {
@@ -2018,7 +2019,8 @@ textarea#comment{min-height:200px}
 
 .carousel--mobileview .carousel-indicators li h4 {
     font-weight: 700;
-    margin-top: 5px
+    margin-top: 5px;
+    margin-bottom:5px
 }
 
 .carousel--mobileview .carousel-indicators li.active h4,

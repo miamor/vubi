@@ -1,5 +1,9 @@
 <?php $config->addJS(-1, 'https://cdn.grab.com/vn/wp-content/themes/grabsg/js/bootstrap.min.js');
-$config->addJS('', 'progress.js'); ?>
+$config->addJS('', 'progress.js');
+
+include 'objects/progress.php';
+$progressObj = new Progress();
+$progList = $progressObj->readAll(); ?>
 <div class="main-content">
     <div class="main">
         <div class="pagination">
@@ -28,44 +32,26 @@ $config->addJS('', 'progress.js'); ?>
                         <div style="margin-top:20px" class="carousel carousel--mobileview carousel-fade slide clearfix" data-ride="carousel" id="carousel--mobileview--how-it-works-grabtaxi">
                             <!-- Indicators -->
                             <ol class="carousel-indicators steps--4 clearfix">
-                                <li class="active" data-slide-to="0" data-target="#carousel--mobileview--how-it-works-grabtaxi"
-                                    data-step="1">
-                                    <h4>Đặt xe chỉ với 2 thao tác đơn giản</h4>
-                                    <p>Đừng quên chọn điểm đến của bạn để nhận thông báo ước lượng về giá cước cho
-                                        chuyến đi.</p>
-                                </li>
-                                <li data-slide-to="1" data-target="#carousel--mobileview--how-it-works-grabtaxi"
-                                    data-step="2">
-                                    <h4>Tài xế đón liền tay!</h4>
-                                    <p>Grab sẽ giúp bạn tìm tài xế (có xe trống) gần nhất.</p>
-                                </li>
-                                <li data-slide-to="2" data-target="#carousel--mobileview--how-it-works-grabtaxi"
-                                    data-step="3">
-                                    <h4>Dõi theo tài xế</h4>
-                                    <p>Bạn có thể dõi theo di chuyển của tài xế và biết trước thời điểm bạn sẽ được
-                                        ngồi lên xe!</p>
-                                </li>
-                                <li data-slide-to="3" data-target="#carousel--mobileview--how-it-works-grabtaxi"
-                                    data-step="4">
-                                    <h4>Kết thúc hành trình an toàn mỹ mãn</h4>
-                                    <p>Bạn thậm chí còn có thể chia sẻ hành trình của mình với người thân để thêm phần
-                                        an tâm trong chuyến đi nha!</p>
-                                </li>
+                            <?php foreach ($progList as $pK => $pO) {
+                                if ($pK == 0) $active = ' class="active"';
+                                else $active = '';
+                                $pKn = $pK+1;
+                                echo '<li'.$active.' data-slide-to="'.$pK.'" data-target="#carousel--mobileview--how-it-works-grabtaxi"
+                                data-step="'.$pKn.'">
+                                <h4>'.$pO['title'].'</h4>
+                                <p>'.$pO['content'].'</p>
+                            </li>';
+                            } ?>
                             </ol><!-- Wrapper for slides -->
                             <div class="carousel-description visible-xs"></div>
                             <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="https://cdn.grab.com/vn/wp-content/uploads/sites/11/2016/05/1_step-1.jpg" />
-                                </div><!-- /item -->
-                                <div class="item">
-                                    <img src="https://cdn.grab.com/vn/wp-content/uploads/sites/11/2016/05/2_step-1.jpg" />
-                                </div><!-- /item -->
-                                <div class="item">
-                                    <img src="https://cdn.grab.com/vn/wp-content/uploads/sites/11/2016/05/3_step-1.jpg" />
-                                </div><!-- /item -->
-                                <div class="item">
-                                    <img src="https://cdn.grab.com/vn/wp-content/uploads/sites/11/2016/05/4_step-1.jpg" />
-                                </div><!-- /item -->
+                            <?php foreach ($progList as $pK => $pO) {
+                                if ($pK == 0) $active = ' active';
+                                else $active = '';
+                                echo '<div class="item'.$active.'">
+                                <img src="'.$pO['image'].'" />
+                            </div><!-- /item -->';
+                            } ?>
                             </div><!-- /carousel-inner -->
                             <div class="carousel-bg"></div>
                         </div><!-- /carousel -->
