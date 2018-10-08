@@ -50,5 +50,5 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 #RewriteRule !\.(json|js|ico|gif|jpg|jpeg|png|css|html|swf|flv|xml|eot|woff|ttf|woff2|svg)$ index.php [QSA,L]
 #RewriteRule !(\b(\w*include\w*)\b) index.php [QSA,L]
 
-RewriteRule ^((?!(index|contact|tuvan|xet-nghiem-ung-thu|tam-soat-di-truyen|about|news|requests))[^/].+)$ index.php?page=$1
-RewriteRule ^((index|contact|tuvan|xet-nghiem-ung-thu|tam-soat-di-truyen|about|news|requests).*)$ index.php?page=$1
+RewriteRule ^((?!(index|contact|tuvan|xet-nghiem-ung-thu|tam-soat-di-truyen|about|news|requests|progress))[^/].+)$ index.php?page=$1
+RewriteRule ^((index|contact|tuvan|xet-nghiem-ung-thu|tam-soat-di-truyen|about|news|requests|progress).*)$ index.php?page=$1

@@ -108,10 +108,11 @@
 	.duantieubieu-content{
 
 	}
-	.main > div{
+	.main > div:not(.pagination){
 		padding-left: 0px;
 		padding-right: 0px;
-	}
+    }
+    div.pagination{padding-left:8px;padding-right:8px}
 	.header-content .logo {
 	    float: none;
 	    margin: 0;
@@ -354,7 +355,7 @@
 		display: none;
 	}
 	.head-top-left ul li:last-child{
-		margin: 68px 0 -68px;
+		/*margin: 68px 0 -68px;*/
 		padding: 0;
 	}
 	.head-top-right{
